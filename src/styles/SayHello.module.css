@@ -1,0 +1,9 @@
+.header {
+    font-size: 1.5rem;
+    font-family: 'Pretendard Semibold';
+    display: flex;
+}
+
+.content {
+    font-size: 1.2rem;
+}

@@ -1,0 +1,17 @@
+.wrap {
+    margin-top: 34px;
+}
+
+.header {
+    font-size: 1.5rem;
+    font-family: 'Pretendard Semibold';
+    display: flex;
+}
+
+.container {
+    background-color: #f4f4f4;
+    height: 56px;
+    margin-top: 29px;
+    border-radius: 10px;
+    display: flex;
+}

@@ -1,3 +1,17 @@
+.wrap {
+    margin-top: 53px;
+}
+
+.container {
+    background-color: #FBF198;
+    border-radius: 10px;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 28px;
+}
+
 .header {
     font-size: 1.5rem;
     font-family: 'Pretendard Semibold';
@@ -5,5 +19,12 @@
 }
 
 .content {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-family: 'Pretendard Medium';
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
 }

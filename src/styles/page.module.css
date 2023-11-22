@@ -1,0 +1,11 @@
+.wrap {
+    width: 902px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width:904px) {
+    .wrap {
+        width: 80%;
+    }
+}

@@ -11,7 +11,7 @@
 .content {
     background-color: #F4F4F4;
     border-radius: 10px;
-    height: 176px;
+    height: auto;
     margin-top: 34px;
     display: flex;
     justify-content: space-between;
@@ -28,18 +28,19 @@
 .date {
     font-size: 1rem;
     font-family: 'Pretendard Medium';
-    padding-bottom: 9px;
+    padding-bottom: 5px;
 }
 
 .title {
     font-size: 1.5rem;
-    font-family: 'Pretendard Semibold';
-    padding-bottom: 12px;
+    font-family: 'Pretendard SemiBold';
+    padding-bottom: 10px;
 }
 
 .description {
     font-size: 1rem;
-    font-family: 'Pretendard Medium';
+    font-family: 'Pretendard Regular';
+    margin-bottom: 10px;
 }
 
 .tag {
@@ -59,23 +60,53 @@
     padding-left: 15px;
     padding-right: 15px;
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 
-.image {
+.img_wrap  {
     width: 192px;
     height: 108px;
-    border-radius: 4px;
-    object-fit: cover;
     padding-top: 18px;
     padding-right: 28px;
 }
 
-@media (max-width:904px) {
-    .image {
-        display: none;
+.image {
+    width: auto;
+    height: 108px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+@media (max-width:700px) {
+    .img_wrap {
+        width: 100%; 
+        height: auto;
+        text-align: center;
+        padding: 0;
+        margin-top: 20px; 
     }
-    .tag {
-        display: none;
+    .image {
+        width: 80%; 
+        height: auto; 
+        border-radius: 5px;
+        object-fit: cover;
+    }
+    .content{
+        flex-direction: column-reverse;
+    }
+    .text {
+        justify-content: center;
+    }
+    .date {
+        width: 80%;
+    }
+    .title {
+        width: 80%;
+    }
+    .description {
+        width: 80%;
     }
 }
+
+
 

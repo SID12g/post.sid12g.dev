@@ -9,11 +9,13 @@ export default function PostList() {
             <div className={styles.content}>
                 <div className={styles.text}>
                     <p className={styles.date}>2023년 11월 19일 (일요일)</p>
-                    <p className={styles.title}>Next.js 13.4는 어떤 기능이 추가되었을까?</p>
+                    <p className={styles.title}>Next.js 13.4는 어떤 기능이 추가되었을까? 나는 그것이 진실로 궁금합니다!!</p>
                     <p className={styles.description}>이전 버전의 Next와 비교하기</p>
                     <div className={styles.tag}>Next</div>
                 </div>
-                <Image src={next_test} className={styles.image} alt='preview' />
+                <div className={styles.img_wrap}>
+                    <Image src={next_test} className={styles.image} alt='preview' />
+                </div>
             </div>
         </div>
     )

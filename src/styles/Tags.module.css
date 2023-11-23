@@ -14,4 +14,36 @@
     margin-top: 29px;
     border-radius: 10px;
     display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.scroll {
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+.scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+.tag {
+    background-color: #FBF198;
+    width: auto;
+    height: 25px;
+    display: flex;
+    border-radius: 18px;
+    font-size: 1rem;
+    font-family: 'Pretendard Medium';
+    align-items: center;
+    justify-content: center;
+    clear: both;
+    float: left;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 10px;
 }

@@ -8,6 +8,18 @@
     display: flex;
 }
 
+.link {
+    color: black;
+    text-decoration: none;
+}
+
+.link:hover {
+    .content {
+        transform: scale(1.02);
+        transition-duration: 0.3s;
+    }
+}
+
 .content {
     background-color: #F4F4F4;
     border-radius: 10px;
@@ -15,6 +27,7 @@
     margin-top: 34px;
     display: flex;
     justify-content: space-between;
+    transition: all 0.3s;
 }
 
 .text {
@@ -27,7 +40,7 @@
 
 .date {
     font-size: 1rem;
-    font-family: 'Pretendard Medium';
+    font-family: 'Pretendard Regular';
     padding-bottom: 5px;
 }
 
@@ -53,17 +66,16 @@
     font-family: 'Pretendard Medium';
     align-items: center;
     justify-content: center;
-    clear:both;
-    float:left;
+    clear: both;
+    float: left;
     padding-top: 3px;
     padding-bottom: 3px;
     padding-left: 15px;
     padding-right: 15px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-.img_wrap  {
+.img_wrap {
     width: 192px;
     height: 108px;
     padding-top: 18px;
@@ -79,34 +91,37 @@
 
 @media (max-width:700px) {
     .img_wrap {
-        width: 100%; 
+        width: 100%;
         height: auto;
         text-align: center;
         padding: 0;
-        margin-top: 20px; 
+        margin-top: 30px;
     }
+
     .image {
-        width: 80%; 
-        height: auto; 
+        width: 80%;
+        height: auto;
         border-radius: 5px;
         object-fit: cover;
     }
-    .content{
+
+    .content {
         flex-direction: column-reverse;
     }
+
     .text {
         justify-content: center;
     }
+
     .date {
         width: 80%;
     }
+
     .title {
         width: 80%;
     }
+
     .description {
         width: 80%;
     }
 }
-
-
-

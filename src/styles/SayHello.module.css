@@ -22,7 +22,21 @@
 .content {
     font-size: 1rem;
     font-family: 'Pretendard Medium';
+    color: black;
 }
+
+.content a{
+    font-size: 1rem;
+    font-family: 'Pretendard Medium';
+    color: black;
+    text-decoration: none;
+}
+
+.content a:hover{
+    font-size: 1rem;
+    font-family: 'Pretendard SemiBold';
+}
+
 
 .icon {
     width: 20px;

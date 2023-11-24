@@ -17,9 +17,10 @@ const blogs = files.map((filename) => {
 });
 
 export default function PostList() {
+    const count = blogs.length
     return (
         <div className={styles.wrap}>
-            <p className={styles.header}>📝All Posts (31)</p>
+            <p className={styles.header}>📝All Posts ({count})</p>
             {blogs.map((blog, index) => (
                 <Post
                     key={index}

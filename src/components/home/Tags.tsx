@@ -1,5 +1,9 @@
+import { blogs } from '@/utils/getMdxTags'
 import styles from '../../styles/Tags.module.css'
+
 export default function Tags() {
+   const k = blogs
+   console.log(k)
     return (
         <div className={styles.wrap}>
             <p className={styles.header}>📌Tags</p>

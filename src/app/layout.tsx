@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="kr">
       <body className={inter.className}>
-        <NavBar />
+      <NavBar />
         {children}
         <Copyright />
       </body>

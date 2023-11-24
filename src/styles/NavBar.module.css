@@ -6,6 +6,8 @@
     background-color: white;
     box-shadow: 0 0 2px;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
 }
 
 .btn_wrap {

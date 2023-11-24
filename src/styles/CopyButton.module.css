@@ -1,0 +1,32 @@
+.share_wrap {
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s;
+    margin-top:150px;
+    height: 50px;
+}
+
+.share_wrap:hover {
+    filter:brightness(0.9)
+}
+
+.share_container {
+    width: 70%;
+    height: 50px;
+    display: flex;
+    background-color: #FBF198;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.share_icon {
+    width: 17px;
+    margin-right: 10px;
+    height: 17px;
+}
+
+.share_text {
+    font-family: 'Pretendard SemiBold';
+    font-size: 1rem;
+}

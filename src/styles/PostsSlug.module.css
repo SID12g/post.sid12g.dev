@@ -80,11 +80,10 @@
 }
 
 .content pre {
-    font-family: 'Pretendard SemiBold';
+    padding: 20px;
+    border-radius: 10px;
     font-size: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    
+    line-height: 25px;
 }
 
 .content code {
@@ -144,6 +143,8 @@
     margin-right: auto;
     display: block;
 }
+
+
 
 @media (max-width:904px) {
     .wrap {

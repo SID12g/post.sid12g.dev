@@ -8,6 +8,7 @@
     justify-content: space-between;
     position: fixed;
     top: 0;
+    z-index: 1000;
 }
 
 .btn_wrap {
@@ -33,13 +34,14 @@
 .icon {
     width: 24px;
     height: 24px;
-    margin-left: 19px;
-    transition: all 0.3s;
+    margin-left: 16px;
     border-radius: 30px;
+    padding: 3px;
+    transition: all 0.3s;
 }
 
 .icon:hover {
-    opacity: 0.5;
+    background-color: rgb(241, 241, 241);
 }
 
 .button {
@@ -56,14 +58,16 @@
 }
 
 .mode {
-    width: 24px;
-    height: 24px;
-    margin-left: 19px;
+    width: 20px;
+    height: 20px;
+    margin-left: 16px;
+    padding: 3px;
     transition: all 0.3s;
+    border-radius: 100px;
 }
 
 .mode:hover {
-    opacity: 0.5;
+    background-color: rgb(241, 241, 241);
 }
 
 /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/

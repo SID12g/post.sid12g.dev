@@ -9,3 +9,7 @@ body {
 p {
   margin: 0;
 }
+
+blockquote {
+  margin: 0;
+}

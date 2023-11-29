@@ -50,7 +50,7 @@
 }
 
 .image {
-    width: 803px;
+    width: 100%;
     height: auto;
     border-radius: 17px;
     object-fit: cover;
@@ -71,6 +71,13 @@
     padding-right: 20px;
 }
 
+.content blockquote p {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 35px;
+}
+
 .content li {
     font-family: 'Pretendard SemiBold';
     font-size: 20px;
@@ -84,14 +91,17 @@
     border-radius: 10px;
     font-size: 15px;
     line-height: 25px;
+    overflow: scroll;
+    
 }
 
-.content code {
 
+.content code {
+    
 }
 
 .content p {
-    font-size: 20px;
+    font-size: 1rem;
     margin-top: 20px;
     margin-bottom: 20px;
     line-height: 35px;
@@ -100,7 +110,7 @@
 .content h1 {
     margin-top: 50px;
     margin-bottom: 10px;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
 }
 
 .content h2 {
@@ -134,7 +144,7 @@
 }
 
 .content img {
-    width: 803px;
+    width: 100%;
     height: auto;
     object-fit: cover;
     margin-top: 50px;
@@ -146,16 +156,10 @@
 
 
 
-@media (max-width:904px) {
+@media (max-width:1023px) {
     .wrap {
         width: 80%;
     }
 
-    .image {
-        width: 80%;
-    }
-
-    .content img {
-        width: 80%;
-    }
+    
 }

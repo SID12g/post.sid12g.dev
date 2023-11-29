@@ -4,6 +4,7 @@ import styles from '../../styles/Tags.module.css'
 export default function Tags() {
    const k = blogs
    console.log(k)
+   //블로그 목록 가져오는데 태그 기능 해야함
     return (
         <div className={styles.wrap}>
             <p className={styles.header}>📌Tags</p>

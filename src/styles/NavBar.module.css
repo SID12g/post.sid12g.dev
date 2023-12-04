@@ -22,7 +22,8 @@
 .logo {
     font-size: 1.5rem;
     margin-left: 40px;
-    font-family: 'Pretendard SemiBold';
+    font-family: 'Pretendard';
+    font-weight: 600;
     color: black;
     text-decoration: none;
 }
@@ -46,7 +47,8 @@
 
 .button {
     font-size: 1rem;
-    font-family: 'Pretendard Medium';
+    font-family: 'Pretendard';
+    font-weight: 500;
     text-decoration: none;
     color: black;
     width: 70px;

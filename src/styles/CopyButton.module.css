@@ -27,6 +27,7 @@
 }
 
 .share_text {
-    font-family: 'Pretendard'; /* semibold */
+    font-family: 'Pretendard';
+    font-weight: 600; 
     font-size: 1rem;
 }

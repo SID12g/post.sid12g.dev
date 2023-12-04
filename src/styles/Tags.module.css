@@ -4,7 +4,8 @@
 
 .header {
     font-size: 1.5rem;
-    font-family: 'Pretendard Semibold';
+    font-family: 'Pretendard';
+    font-weight: 600;
     display: flex;
 }
 
@@ -36,7 +37,8 @@
     display: flex;
     border-radius: 18px;
     font-size: 1rem;
-    font-family: 'Pretendard Medium';
+    font-family: 'Pretendard';
+    font-weight: 500;
     align-items: center;
     justify-content: center;
     clear: both;

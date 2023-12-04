@@ -68,15 +68,15 @@
 }
 
 .img_wrap {
-    width: 192px;
-    height: 108px;
-    padding-top: 18px;
-    padding-right: 28px;
+    width: 224px;
+    height: 126px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .image {
-    width: auto;
-    height: 108px;
+    width: 224px;
+    height: 126px;
     border-radius: 5px;
     object-fit: cover;
 }

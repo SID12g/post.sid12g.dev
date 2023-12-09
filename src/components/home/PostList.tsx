@@ -6,9 +6,8 @@ import matter from 'gray-matter';
 import { headers } from 'next/headers';
 
 export default function PostList() {
-  const headersList = headers();
-  const tagHeader = headersList.get('tag') || '';
-  const targetTag = tagHeader === '' ? 'none' : tagHeader; // 태그를 지정
+  
+  const targetTag = '' === '' ? 'none' : ''; // 태그를 지정
 
   const blogDir = "blogs";
   const files = fs.readdirSync(path.join(blogDir));

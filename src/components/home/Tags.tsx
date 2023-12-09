@@ -26,7 +26,6 @@ function Tags({ tags }: { tags: unknown[] }) {
             setNowTag('none')
             router.push(`/`)
         }
-
     }
     return (
         <div className={styles.wrap}>
@@ -45,4 +44,4 @@ function Tags({ tags }: { tags: unknown[] }) {
     );
 }
 
-export {Tags, getPath}
+export { Tags }

@@ -2,7 +2,6 @@
 import styles from '../../styles/CopyButton.module.css'
 import copy_icon from '../../../public/copy_icon.svg'
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import { usePathname } from 'next/navigation';
 
 export default function CopyButton(){

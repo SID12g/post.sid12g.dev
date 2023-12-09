@@ -15,6 +15,6 @@ files.forEach((filename) => {
 });
 
 // Set을 배열로 변환
-const tags = Array.from(uniqueTags);
+const getTags = Array.from(uniqueTags);
 
-export default tags;
+export default getTags;

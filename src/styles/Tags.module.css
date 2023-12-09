@@ -31,7 +31,30 @@
 
 .scroll::-webkit-scrollbar {
     display: none;
-  }
+}
+
+.now_tag {
+    background-color: #c5c5c5;
+    width: auto;
+    height: 25px;
+    display: flex;
+    border-radius: 18px;
+    font-size: 1rem;
+    font-family: 'Pretendard';
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    clear: both;
+    float: left;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 10px;
+    white-space: nowrap; 
+    transition: all 0.3s;
+    cursor: pointer;
+}
 
 .tag {
     background-color: #FBF198;
@@ -52,4 +75,10 @@
     padding-right: 15px;
     margin-right: 10px;
     white-space: nowrap; 
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.tag:hover {
+    filter: brightness(0.8);
 }

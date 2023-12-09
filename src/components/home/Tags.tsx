@@ -1,13 +1,21 @@
-import React, { ReactNode } from 'react';
+'use client'
+import React, { useState } from 'react';
 import styles from '../../styles/Tags.module.css';
-import PostList from './PostList';
-import getTags from '@/utils/getMdxTags';
 
-export default function TagsAndPost() {
-   const tags: unknown[] = getTags;  // unknown 타입 사용
-   console.log(tags);
+let selectedNowTag: string = 'none';
 
-   // 블로그 목록 가져오는데 태그 기능 해야함
+function Tags({ tags }: { tags: unknown[] }) {
+    const [nowTag, setNowTag] = useState('none');
+    function clickTag(tag:string){
+        if(nowTag != tag) {
+            setNowTag(tag)
+        } else {
+            setNowTag('none')
+        }
+    }
+
+    selectedNowTag = nowTag
+    console.log(`tags : ${selectedNowTag}`)
     return (
         <div className={styles.wrap}>
             <p className={styles.header}>📌Tags</p>
@@ -15,13 +23,14 @@ export default function TagsAndPost() {
                 <div className={styles.scroll}>
                     <div className={styles.margin_container}></div>
                     {
-                        (tags as ReactNode[]).map((tag, i) => (
-                            <div className={styles.tag} key={i}>{tag}</div>
+                        (tags as string[]).map((tag, i) => (
+                            <div onClick={()=>clickTag(tag)} className={nowTag === tag ? styles.now_tag : styles.tag} key={i}>{tag}</div>
                         ))
                     }
                 </div>
             </div>
-            <PostList />
         </div>
     );
 }
+
+export { Tags, selectedNowTag }

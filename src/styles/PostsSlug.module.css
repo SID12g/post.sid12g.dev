@@ -56,7 +56,6 @@
 .image {
     width: 100%;
     height: auto;
-    border-radius: 17px;
     object-fit: cover;
 }
 
@@ -67,17 +66,18 @@
 }
 
 .content blockquote {
-    background-color: #FBF198;
-    border-radius: 10px;
-    display: flex;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-left: 20px;
-    padding-right: 20px;
+    background-color: #f2f2f2;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 17px;
 }
 
 .content blockquote p {
-    font-size: 20px;
+    font-size: 1.1rem;
     margin-top: 10px;
     margin-bottom: 10px;
     line-height: 35px;
@@ -98,15 +98,20 @@
     font-size: 15px;
     line-height: 25px;
     overflow: scroll;
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
 }
 
+.content pre::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
 
 .content code {
     font-family: 'Menlo'
 }
 
 .content p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-top: 20px;
     margin-bottom: 20px;
     line-height: 35px;

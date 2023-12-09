@@ -1,5 +1,4 @@
 import styles from '../../styles/Post.module.css'
-import next_test from '../../../public/next_test.png'
 import Image from 'next/image'
 import Link from 'next/link'
 interface PostProps {
@@ -10,9 +9,11 @@ interface PostProps {
     image: string;
     tag: string;
 }
-export default function Post({link, date, title, description, image, tag}:PostProps){
-    return(
-        <Link href={link} className={styles.link}>
+export default function Post({ link, date, title, description, image, tag }: PostProps) {
+    return (
+        <div>
+            <div className={styles.margin_container}></div>
+            <Link href={link} className={styles.link}>
                 <div className={styles.content}>
                     <div className={styles.text}>
                         <p className={styles.date}>{date}</p>
@@ -25,5 +26,6 @@ export default function Post({link, date, title, description, image, tag}:PostPr
                     </div>
                 </div>
             </Link>
+        </div>
     )
 }

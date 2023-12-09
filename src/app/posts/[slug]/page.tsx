@@ -41,6 +41,7 @@ export default function Post({ params }: any) {
     
     return (
         <div>
+            <title>{props.frontMatter.title}</title>
             <article className={styles.wrap}>
                 <p className={styles.tag}>{props.frontMatter.tag}</p>
                 <p className={styles.date}>{props.frontMatter.date}</p>

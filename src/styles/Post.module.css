@@ -15,11 +15,14 @@
     background-color: #f5f5f5;
     border-radius: 10px;
     height: auto;
-    margin-top: 34px;
     display: flex;
     justify-content: space-between;
     transition: all 0.3s;
     overflow: hidden;
+}
+
+.margin_container {
+    height: 34px;
 }
 
 .text {
@@ -76,6 +79,7 @@
     height: 126px;
     margin-top: auto;
     margin-bottom: auto;
+    margin-right: 28px;
 }
 
 .image {

@@ -1,21 +1,33 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../../styles/Tags.module.css';
+import { useRouter, useSearchParams } from 'next/navigation';
 
-let selectedNowTag: string = 'none';
-
+var getPath:string|null = null
 function Tags({ tags }: { tags: unknown[] }) {
     const [nowTag, setNowTag] = useState('none');
-    function clickTag(tag:string){
-        if(nowTag != tag) {
+    const router = useRouter()
+    const params = useSearchParams()
+    const nowPath = params.get('tag')
+    useEffect(() => {
+        getPath = nowPath
+        console.log(getPath)
+        if(nowPath == null) {
+            setNowTag('none')
+        } else {
+            setNowTag(nowPath)
+        } 
+    }, [nowPath])
+    function clickTag(tag: string) {
+        if (nowTag != tag) {
             setNowTag(tag)
+            router.push(`/?tag=${tag}`)
         } else {
             setNowTag('none')
+            router.push(`/`)
         }
-    }
 
-    selectedNowTag = nowTag
-    console.log(`tags : ${selectedNowTag}`)
+    }
     return (
         <div className={styles.wrap}>
             <p className={styles.header}>📌Tags</p>
@@ -24,7 +36,7 @@ function Tags({ tags }: { tags: unknown[] }) {
                     <div className={styles.margin_container}></div>
                     {
                         (tags as string[]).map((tag, i) => (
-                            <div onClick={()=>clickTag(tag)} className={nowTag === tag ? styles.now_tag : styles.tag} key={i}>{tag}</div>
+                            <div onClick={() => clickTag(tag)} className={nowTag === tag ? styles.now_tag : styles.tag} key={i}>{tag}</div>
                         ))
                     }
                 </div>
@@ -33,4 +45,4 @@ function Tags({ tags }: { tags: unknown[] }) {
     );
 }
 
-export { Tags, selectedNowTag }
+export {Tags, getPath}

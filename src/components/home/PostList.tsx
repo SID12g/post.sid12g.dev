@@ -3,25 +3,27 @@ import Post from './Post';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-
-const targetTag:string = 'none'; // 태그를 지정
-
-const blogDir = "blogs";
-const files = fs.readdirSync(path.join(blogDir));
-
-// 지정된 태그와 일치하는 블로그만 선택
-const filteredBlogs = files
-  .map((filename) => {
-    const fileContent = fs.readFileSync(path.join(blogDir, filename), 'utf-8');
-    const { data: frontMatter } = matter(fileContent);
-    return {
-      meta: frontMatter,
-      slug: filename.replace('.mdx', ''),
-    };
-  })
-  .filter((blog) => targetTag === 'none' ? blog.meta.tag : blog.meta.tag === targetTag);
+import { headers } from 'next/headers';
 
 export default function PostList() {
+  const headersList = headers();
+  const tagHeader = headersList.get('tag') || '';
+  const targetTag = tagHeader === '' ? 'none' : tagHeader; // 태그를 지정
+
+  const blogDir = "blogs";
+  const files = fs.readdirSync(path.join(blogDir));
+
+  const filteredBlogs = files
+    .map((filename) => {
+      const fileContent = fs.readFileSync(path.join(blogDir, filename), 'utf-8');
+      const { data: frontMatter } = matter(fileContent);
+      return {
+        meta: frontMatter,
+        slug: filename.replace('.mdx', ''),
+      };
+    })
+    .filter((blog) => targetTag === 'none' ? blog.meta.tag : blog.meta.tag === targetTag);
+
   const count = filteredBlogs.length;
 
   return (

@@ -25,6 +25,7 @@ export async function generateStaticParams() {
     }))
     return paths
 }
+
 function getPost({ slug }: { slug: string }) {
     const markdownFile = fs.readFileSync(path.join('blogs', slug + '.mdx'), 'utf-8')
 

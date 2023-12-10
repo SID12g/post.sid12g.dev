@@ -3,5 +3,5 @@
     background-color: #FFDB5D;
     position: fixed;
     margin-top: -60px;
-    transition: all 0.3s;
+    /* remove transition 0.3s */
 }

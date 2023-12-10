@@ -14,5 +14,5 @@ const filteredBlogs = files
         };
     })
     .filter((blog) => blog.meta.tag);
-
+    
 export default filteredBlogs

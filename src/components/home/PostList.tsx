@@ -28,7 +28,7 @@ export default function PostList({ getBlogs }: { getBlogs: any[] }) {
   const sortedBlogs = filteredBlogs.sort((a, b) => {
     const dateA = a.meta.date.toLowerCase();
     const dateB = b.meta.date.toLowerCase();
-    return dateA.localeCompare(dateB);
+    return dateB.localeCompare(dateA);
   });
 
   // 페이징 로직
@@ -39,7 +39,7 @@ export default function PostList({ getBlogs }: { getBlogs: any[] }) {
   const count = sortedBlogs.length;
 
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
-
+  
   return (
     <div className={styles.wrap}>
       <p className={styles.header}>{nowTag === 'none' ? `📝All Posts (${count})` : `📝${nowTag} (${count})`}</p>

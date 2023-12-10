@@ -26,6 +26,7 @@ function Tags({ tags }: { tags: unknown[] }) {
             router.push(`/`)
         }
     }
+    
     return (
         <div className={styles.wrap}>
             <p className={styles.header}>📌Tags</p>

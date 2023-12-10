@@ -1,33 +1,25 @@
+'use client'
+import { useSearchParams } from 'next/navigation';
 import styles from '../../styles/PostList.module.css';
 import Post from './Post';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import { headers } from 'next/headers';
+import { useEffect, useState } from 'react';
 
-export default function PostList() {
-  
-  const targetTag = '' === '' ? 'none' : ''; // 태그를 지정
-
-  const blogDir = "blogs";
-  const files = fs.readdirSync(path.join(blogDir));
-
-  const filteredBlogs = files
-    .map((filename) => {
-      const fileContent = fs.readFileSync(path.join(blogDir, filename), 'utf-8');
-      const { data: frontMatter } = matter(fileContent);
-      return {
-        meta: frontMatter,
-        slug: filename.replace('.mdx', ''),
-      };
-    })
-    .filter((blog) => targetTag === 'none' ? blog.meta.tag : blog.meta.tag === targetTag);
-
+export default function PostList({ getBlogs }: { getBlogs: any[] }) {
+  const params = useSearchParams()
+  const nowPath = params.get('tag')
+  const [nowTag, setNowTag] = useState(nowPath == null ? 'none' : nowPath);
+  useEffect(() => {
+    if (nowPath == null) {
+      setNowTag('none')
+    } else {
+      setNowTag(nowPath)
+    }
+  }, [nowPath])
+  const filteredBlogs = getBlogs.filter(blog => nowTag === 'none' ? blog : blog.meta.tag === nowTag);
   const count = filteredBlogs.length;
-
   return (
     <div className={styles.wrap}>
-      <p className={styles.header}>{targetTag === 'none' ? `📝All Posts (${count})` : `📝${targetTag} (${count})`}</p>
+      <p className={styles.header}>{nowTag === 'none' ? `📝All Posts (${count})` : `📝${nowTag} (${count})`}</p>
       {filteredBlogs.map((blog, index) => (
         <Post
           key={index}

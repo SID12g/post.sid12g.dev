@@ -3,15 +3,14 @@ import React, { useEffect, useState } from 'react';
 import styles from '../../styles/Tags.module.css';
 import { useRouter, useSearchParams } from 'next/navigation';
 
-var getPath:string|null = null
+
 function Tags({ tags }: { tags: unknown[] }) {
     const [nowTag, setNowTag] = useState('none');
     const router = useRouter()
     const params = useSearchParams()
     const nowPath = params.get('tag')
     useEffect(() => {
-        getPath = nowPath
-        console.log(getPath)
+        console.log(nowPath)
         if(nowPath == null) {
             setNowTag('none')
         } else {

@@ -11,9 +11,9 @@ export default function NavBar(){
             <Link href="/"  className={styles.logo}><p>SMIN</p></Link>
             <div className={styles.btn_wrap}>
                 <Link href="/" className={styles.button}><p>about me</p></Link>
-                <Link href="https://www.instagram.com/clwm_222"><Image className={styles.icon} src={instagram} alt="icon"/></Link>
-                <Link href="https://github.com/SID12g"><Image className={styles.icon} src={github} alt="icon"/></Link>
-                <div><Image className={styles.mode} src={sun} alt="icon"/></div>
+                <Link href="https://www.instagram.com/clwm_222" className={styles.icon_wrap}><Image className={styles.icon} src={instagram} alt="icon"/></Link>
+                <Link href="https://github.com/SID12g" className={styles.icon_wrap}><Image className={styles.icon} src={github} alt="icon"/></Link>
+                <div className={styles.icon_wrap}><Image className={styles.mode} src={sun} alt="icon"/></div>
             </div>
         </div>
     )

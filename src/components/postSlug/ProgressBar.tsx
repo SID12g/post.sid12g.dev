@@ -3,8 +3,8 @@
 import styles from '@/styles/ProgressBar.module.css'
 import { useState, useEffect } from 'react';
 export default function ProgressBar() {
-    const [position, setPosition] = useState(window.scrollY);
-    const [pageHeight, setPageHeight] = useState(document.documentElement.scrollHeight - innerHeight);
+    const [position, setPosition] = useState(0);
+    const [pageHeight, setPageHeight] = useState(0);
 
     function onScroll() {
         setPosition(window.scrollY);
@@ -26,11 +26,7 @@ export default function ProgressBar() {
         };
         
     }, []);
-    
-    console.log(`position : ${position}`)
-    console.log(`pageHeight : ${pageHeight}`)
     const HeightStatus = (position / pageHeight) * 100;
-    
     return (
         <div className={styles.status} style={{width:`${HeightStatus}%`}}></div>
     )

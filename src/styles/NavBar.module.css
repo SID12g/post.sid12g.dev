@@ -21,7 +21,7 @@
 
 .logo {
     font-size: 1.5rem;
-    margin-left: 40px;
+    margin-left: 36px;
     font-family: 'Pretendard';
     font-weight: 600;
     color: black;
@@ -32,17 +32,23 @@
     text-decoration-line: underline;
 }
 
-.icon {
+.icon_wrap {
     width: 24px;
     height: 24px;
-    margin-left: 16px;
-    border-radius: 30px;
+    margin-left: 13px;
     padding: 3px;
+    border-radius: 100px;
     transition: all 0.3s;
 }
 
-.icon:hover {
+.icon_wrap:hover {
     background-color: rgb(241, 241, 241);
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 30px;
 }
 
 .button {
@@ -62,14 +68,8 @@
 .mode {
     width: 20px;
     height: 20px;
-    margin-left: 16px;
-    padding: 3px;
-    transition: all 0.3s;
+    padding: 2px;
     border-radius: 100px;
-}
-
-.mode:hover {
-    background-color: rgb(241, 241, 241);
 }
 
 /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/

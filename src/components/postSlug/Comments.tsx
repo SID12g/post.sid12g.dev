@@ -24,5 +24,5 @@ export default function Comments() {
     scriptElem.setAttribute('data-lang', 'ko');
     ref.current.appendChild(scriptElem);
   }, []);
-  return <section style={{width:'80%', marginLeft:'auto', marginRight:'auto'}} ref={ref} />;
+  return <section style={{width:'90%', marginLeft:'auto', marginRight:'auto'}} ref={ref} />;
 }

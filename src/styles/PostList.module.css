@@ -9,3 +9,46 @@
     display: flex;
 }
 
+.button_wrap {
+    display: flex;
+    flex-wrap: wrap; /* flex 방향을 수직으로 바꾸기 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 가운데 정렬을 위해 추가 */
+    margin-top: 1.6rem;
+}
+
+.now_button {
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    background-color: #c5c5c5;
+    border-radius: 0.4rem;
+    margin:0.4rem;
+    margin-top: 1.6rem;
+    cursor: pointer;
+    font-family: 'Pretendard';
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.now_button:hover {
+    filter: brightness(0.8);
+}
+
+.num_button {
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    background-color: #FBF198;
+    border-radius: 0.4rem;
+    margin:0.4rem;
+    margin-top: 1.6rem;
+    cursor: pointer;
+    font-family: 'Pretendard';
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.num_button:hover {
+    filter: brightness(0.8);
+}

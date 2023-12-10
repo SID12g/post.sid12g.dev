@@ -9,6 +9,7 @@ import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight';
 import CopyButton from '@/components/postSlug/CopyButton'
 import ProgressBar from '@/components/postSlug/ProgressBar'
+import Comments from '@/components/postSlug/Comments'
 
 const options: any = {
     mdxOptions: {
@@ -59,6 +60,7 @@ export default function Post({ params }: any) {
                     </div>
                 </article>
                 <CopyButton />
+                <Comments />
             </div>
         </div>
     )

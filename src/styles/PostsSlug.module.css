@@ -66,14 +66,11 @@
 }
 
 .content blockquote {
-    background-color: #f2f2f2;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 17px;
+    margin: 1.5rem 0px;
+    padding: 0.8rem 2rem;
+    border-left: 5px solid #faed74;
+    border-radius: 5px;
+    background-color: rgb(244, 244, 244);
 }
 
 .content blockquote p {
@@ -81,6 +78,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     line-height: 35px;
+    font-family: 'Pretendard';
 }
 
 .content li {
@@ -100,6 +98,8 @@
     overflow: scroll;
     -ms-overflow-style: none; /* 인터넷 익스플로러 */
     scrollbar-width: none; /* 파이어폭스 */
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .content pre::-webkit-scrollbar {

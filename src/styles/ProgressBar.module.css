@@ -1,6 +1,7 @@
 .status {
-    height: 1rem;
-    background-color: #FBF198;
+    height: 0.4rem;
+    background-color: #FFDB5D;
     position: fixed;
-    margin-top: -62px;
+    margin-top: -60px;
+    transition: all 0.3s;
 }

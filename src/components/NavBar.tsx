@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import instagram from "../../public/navbar/instagram_icon.svg"
 import github from "../../public/navbar/github_icon.svg"
-import sun from "../../public/navbar/sun_icon.svg"
+import DarkMode from './DarkMode';
+
 
 export default function NavBar(){
     return(
@@ -13,7 +14,7 @@ export default function NavBar(){
                 <Link href="/" className={styles.button}><p>about me</p></Link>
                 <Link href="https://www.instagram.com/clwm_222" className={styles.icon_wrap}><Image className={styles.icon} src={instagram} alt="icon"/></Link>
                 <Link href="https://github.com/SID12g" className={styles.icon_wrap}><Image className={styles.icon} src={github} alt="icon"/></Link>
-                <div className={styles.icon_wrap}><Image className={styles.mode} src={sun} alt="icon"/></div>
+                <DarkMode />
             </div>
         </div>
     )

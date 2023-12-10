@@ -5,12 +5,14 @@ import { useState, useEffect } from 'react';
 export default function ProgressBar() {
     const [position, setPosition] = useState(0);
     const [pageHeight, setPageHeight] = useState(0);
-
+    const HeightStatus = (position / pageHeight) * 100;
     function onScroll() {
         setPosition(window.scrollY);
     }
 
     useEffect(() => {
+        setPosition(window.scrollY);
+
         const updatePageHeight = () => {
             setPageHeight(document.documentElement.scrollHeight - innerHeight);
         };
@@ -24,10 +26,12 @@ export default function ProgressBar() {
             window.removeEventListener('scroll', onScroll);
             window.removeEventListener('resize', updatePageHeight);
         };
-        
+
     }, []);
-    const HeightStatus = (position / pageHeight) * 100;
+    console.log(`position : ${position}`)
+    console.log(`pageHeight : ${pageHeight}`)
+    console.log(`HeightStatus : ${HeightStatus}`)
     return (
-        <div className={styles.status} style={{width:`${HeightStatus}%`}}></div>
+        <div className={styles.status} style={{ width: `${HeightStatus}%` }}></div>
     )
 }

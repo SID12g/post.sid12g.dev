@@ -28,9 +28,6 @@ export default function ProgressBar() {
         };
 
     }, []);
-    console.log(`position : ${position}`)
-    console.log(`pageHeight : ${pageHeight}`)
-    console.log(`HeightStatus : ${HeightStatus}`)
     return (
         <div className={styles.status} style={{ width: `${HeightStatus}%` }}></div>
     )

@@ -10,7 +10,6 @@ function Tags({ tags }: { tags: unknown[] }) {
     const params = useSearchParams()
     const nowPath = params.get('tag')
     useEffect(() => {
-        console.log(nowPath)
         if(nowPath == null) {
             setNowTag('none')
         } else {
@@ -35,7 +34,7 @@ function Tags({ tags }: { tags: unknown[] }) {
                     <div className={styles.margin_container}></div>
                     {
                         (tags as string[]).map((tag, i) => (
-                            <div onClick={() => clickTag(tag)} className={nowTag === tag ? styles.now_tag : styles.tag} key={i}>{tag}</div>
+                            <div onClick={() => clickTag(tag)} className={nowTag === tag[0] ? styles.now_tag : styles.tag} key={i}>{tag}</div>
                         ))
                     }
                 </div>

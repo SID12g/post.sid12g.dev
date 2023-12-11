@@ -17,7 +17,7 @@ const options: any = {
         rehypePlugins: [rehypeHighlight],
     }
 }
-//
+
 export async function generateStaticParams() {
     const files = fs.readdirSync(path.join('blogs'))
 
@@ -41,7 +41,7 @@ function getPost({ slug }: { slug: string }) {
 
 export default function Post({ params }: any) {
     const props = getPost(params);
-
+    
     return (
         <div>
             <ProgressBar />

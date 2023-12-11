@@ -5,15 +5,15 @@ import styles from '../../../styles/PostsSlug.module.css'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import Image from 'next/image'
 import "@/styles/highlight-js/github-dark.css"
-import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight';
 import CopyButton from '@/components/postSlug/CopyButton'
 import ProgressBar from '@/components/postSlug/ProgressBar'
 import Comments from '@/components/postSlug/Comments'
+import Link from 'next/link'
 
 const options: any = {
     mdxOptions: {
-        remarkPlugins: [remarkGfm],
+        remarkPlugins: [],
         rehypePlugins: [rehypeHighlight],
     }
 }
@@ -48,7 +48,7 @@ export default function Post({ params }: any) {
             <div>
                 <title>{props.frontMatter.title}</title>
                 <article className={styles.wrap}>
-                    <p className={styles.tag}>{props.frontMatter.tag}</p>
+                    <Link className={styles.tag_wrap} href={'/?tag='+props.frontMatter.tag}><p className={styles.tag}>{props.frontMatter.tag}</p></Link>
                     <p className={styles.date}>{props.frontMatter.date}</p>
                     <h1 className={styles.title}>{props.frontMatter.title}</h1>
                     <p className={styles.description}>{props.frontMatter.description}</p>

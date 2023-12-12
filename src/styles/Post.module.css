@@ -35,7 +35,7 @@
 
 .date {
     font-size: 1rem;
-    font-family: 'Pretendard'; 
+    font-family: 'Pretendard';
     font-weight: 400;
     padding-bottom: 5px;
 }
@@ -44,7 +44,7 @@
     max-width: 600px;
     max-height: 55px;
     font-size: 1.5rem;
-    font-family: 'Pretendard'; 
+    font-family: 'Pretendard';
     font-weight: 600;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -52,7 +52,7 @@
     text-overflow: ellipsis;
     word-wrap: break-word;
     display: -webkit-box;
-    -webkit-line-clamp: 2 ;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 
@@ -68,7 +68,7 @@
     text-overflow: ellipsis;
     word-wrap: break-word;
     display: -webkit-box;
-    -webkit-line-clamp: 1 ;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
 

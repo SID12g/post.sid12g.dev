@@ -41,14 +41,28 @@
     transition: all 0.3s;
 }
 
+.icon_wrap_dark {
+    width: 24px;
+    height: 24px;
+    margin-left: 13px;
+    padding: 3px;
+    border-radius: 100px;
+    transition: all 0.3s;
+}
+
 .icon_wrap:hover {
     background-color: rgb(241, 241, 241);
+}
+
+.icon_wrap_dark:hover {
+    background-color: rgb(68, 68, 68);
 }
 
 .icon {
     width: 24px;
     height: 24px;
     border-radius: 30px;
+    fill: #333
 }
 
 .button {

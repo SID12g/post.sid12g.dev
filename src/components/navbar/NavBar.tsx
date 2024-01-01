@@ -15,9 +15,9 @@ function ChangeDarkMode() {
   const lastPart = cookieValue.length > 1 ? cookieValue.pop() : '';
   const mode = lastPart ? lastPart.split(';')[0] : '';
   if (mode === 'light' || mode === '') {
-    document.cookie = 'mode=dark; path=/';
+    document.cookie = 'mode=dark; path=/; max-age=' + (3600 * 24 * 400);
   } else if (mode === 'dark') {
-    document.cookie = 'mode=light; path=/';
+    document.cookie = 'mode=light; path=/; max-age=' + (3600 * 24 * 400);
   }
 }
 

@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import '../styles/globals.css'
 import NavBar from '@/components/navbar/NavBar'
 import Copyright from '@/components/Copyright'
+import { cookies } from 'next/headers'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,9 +18,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  let cookie = cookies().get('mode')
   return (
     <html lang="kr">
-      <body className={inter.className}>
+      <body style={cookie != undefined && cookie.value == 'dark' ? {backgroundColor: '#1d1d1d', color: 'white'} : {backgroundColor: 'white'}}>
       <NavBar />
         {children}
         <Copyright />

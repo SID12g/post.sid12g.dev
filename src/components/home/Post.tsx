@@ -10,11 +10,17 @@ interface PostProps {
     tag: string;
 }
 export default function Post({ link, date, title, description, image, tag }: PostProps) {
+    let mode;
+    if (typeof document !== 'undefined') {
+        const cookieValue = ('; ' + document.cookie).split('; mode=');
+        const lastPart = cookieValue.length > 1 ? cookieValue.pop() : '';
+        mode = lastPart ? lastPart.split(';')[0] : '';
+    }
     return (
         <div>
             <div className={styles.margin_container}></div>
             <Link href={link} className={styles.link}>
-                <div className={styles.content}>
+                <div className={mode == 'dark' ? styles.content_dark : styles.content}>
                     <div className={styles.text}>
                         <p className={styles.date}>{date}</p>
                         <p className={styles.title}>{title}</p>

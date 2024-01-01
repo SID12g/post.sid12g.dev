@@ -9,6 +9,16 @@
     display: flex;
 }
 
+.container_dark {
+    background-color: #4c4c4c;
+    height: 56px;
+    margin-top: 29px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px white solid;
+}
+
 .container {
     background-color: #f4f4f4;
     height: 56px;
@@ -54,6 +64,7 @@
     white-space: nowrap; 
     transition: all 0.3s;
     cursor: pointer;
+    color: black;
 }
 
 .tag {
@@ -77,6 +88,7 @@
     white-space: nowrap; 
     transition: all 0.3s;
     cursor: pointer;
+    color: black;
 }
 
 .tag:hover {

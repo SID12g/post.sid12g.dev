@@ -85,6 +85,7 @@
     margin-bottom: 10px;
     line-height: 30px;
     font-family: 'Pretendard';
+    color: black;
 }
 
 .content figcaption {
@@ -113,6 +114,7 @@
     scrollbar-width: none; /* 파이어폭스 */
     margin-top: 30px;
     margin-bottom: 30px;
+    border: 1px white solid;
 }
 
 .content pre::-webkit-scrollbar {
@@ -136,7 +138,6 @@
     font-size: 1rem;
     font-family: 'Pretendard';
     font-weight: 500;
-    color: black;
     text-decoration: none;
     white-space: normal;
     word-wrap: break-word; 
@@ -201,6 +202,7 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
+    border: 1px white solid;
 }
 
 

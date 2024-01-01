@@ -7,9 +7,12 @@ import getTagsWithCounts from "@/utils/getMdxTags";
 import { cookies } from 'next/headers'
 
 export default function Home() {
-  let cookie = cookies().get('mode')
+  let cookie: any = cookies().get('mode')
   const tags: unknown[] = getTagsWithCounts
   const getBlogs: unknown[] = filteredBlogs
+  if(cookie == null) {
+    cookie = 'light'
+  }
   return (
     <div className={cookie != undefined && cookie.value == 'dark' ? styles.wrap_dark : styles.wrap}>
       <SayHello />

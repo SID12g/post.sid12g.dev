@@ -18,7 +18,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  let cookie = cookies().get('mode')
+  let cookie: any = cookies().get('mode')
+  
+  if(cookie == null) {
+    cookie = 'light'
+  }
   return (
     <html lang="kr">
       <body style={cookie != undefined && cookie.value == 'dark' ? { backgroundColor: '#1d1d1d', color: 'white' } : { backgroundColor: 'white' }}>

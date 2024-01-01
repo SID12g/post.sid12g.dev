@@ -1,3 +1,4 @@
+'use client'
 import styles from '../../styles/NavBar.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,31 +8,44 @@ import instagram_dark from '../../../public/navbar/dark/instagram_icon.svg';
 import github_dark from '../../../public/navbar/dark/github_icon.svg';
 import sun from '../../../public/navbar/sun_icon.svg';
 import moon from '../../../public/navbar/dark/moon_icon.svg';
-import { cookies } from 'next/headers'
-import {ChangeDarkMode} from './ChangeDarkMode';
+import { useRouter } from 'next/navigation';
 
-export default function NavBar() {
-  let cookie = cookies().get('mode')
+function ChangeDarkMode() {
+  const cookieValue = ('; ' + document.cookie).split('; mode=');
+  const lastPart = cookieValue.length > 1 ? cookieValue.pop() : '';
+  const mode = lastPart ? lastPart.split(';')[0] : '';
+  if (mode === 'light' || mode === '') {
+    document.cookie = 'mode=dark; path=/';
+  } else if (mode === 'dark') {
+    document.cookie = 'mode=light; path=/';
+  }
+}
+
+export default function NavBar({ mode }: { mode: any }) {
+  const router = useRouter()
   return (
-    <div className={styles.nav_wrap} style={cookie != undefined && cookie.value == 'dark' ? { backgroundColor: 'black' }: {}}>
-      <Link href="/" className={styles.logo} style={cookie != undefined && cookie.value == 'dark' ? { color: 'white' } : {}}>
+    <div className={styles.nav_wrap} style={mode.value == 'dark' ? { backgroundColor: 'black' } : {}}>
+      <Link href="/" className={styles.logo} style={mode.value == 'dark' ? { color: 'white' } : {}}>
         <p>SIIID</p>
       </Link>
       <div className={styles.btn_wrap}>
-        <Link href="/" className={styles.button} style={cookie != undefined && cookie.value == 'dark' ? { color: 'white' } : {}}>
+        <Link href="/" className={styles.button} style={mode.value == 'dark' ? { color: 'white' } : {}}>
           <p>about me</p>
         </Link>
         <Link
           href="https://www.instagram.com/clwm_222"
-          className={cookie != undefined && cookie.value == 'dark' ? styles.icon_wrap_dark : styles.icon_wrap}
+          className={mode.value == 'dark' ? styles.icon_wrap_dark : styles.icon_wrap}
         >
-          <Image className={styles.icon} src={cookie != undefined && cookie.value == 'dark' ? instagram_dark : instagram} alt="icon" />
+          <Image className={styles.icon} src={mode.value == 'dark' ? instagram_dark : instagram} alt="icon" />
         </Link>
-        <Link href="https://github.com/SID12g" className={cookie != undefined && cookie.value == 'dark' ? styles.icon_wrap_dark : styles.icon_wrap}>
-          <Image className={styles.icon} src={cookie != undefined && cookie.value == 'dark' ? github_dark : github} alt="icon" />
+        <Link href="https://github.com/SID12g" className={mode.value == 'dark' ? styles.icon_wrap_dark : styles.icon_wrap}>
+          <Image className={styles.icon} src={mode.value == 'dark' ? github_dark : github} alt="icon" />
         </Link>
-        <div className={cookie != undefined && cookie.value == 'dark' ? styles.icon_wrap_dark : styles.icon_wrap} onClick={ChangeDarkMode}>
-          <Image className={styles.mode} src={cookie != undefined && cookie.value == 'dark' ? moon: sun } alt="icon" />
+        <div className={mode.value == 'dark' ? styles.icon_wrap_dark : styles.icon_wrap} onClick={() => {
+          ChangeDarkMode()
+          router.refresh()
+        }}>
+          <Image className={styles.mode} src={mode.value == 'dark' ? moon : sun} alt="icon" />
         </div>
       </div>
     </div>

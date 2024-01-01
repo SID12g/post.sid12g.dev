@@ -1,6 +1,9 @@
 'use client'
 
+import { useRouter } from "next/navigation";
+
 function ChangeDarkMode() {
+    const router = useRouter()
     const cookieValue = ('; ' + document.cookie).split('; mode=');
     const lastPart = cookieValue.length > 1 ? cookieValue.pop() : '';
     const mode = lastPart ? lastPart.split(';')[0] : '';

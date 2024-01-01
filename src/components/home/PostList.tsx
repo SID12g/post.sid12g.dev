@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 
 // ... (import 문장)
 
-export default function PostList({ getBlogs }: { getBlogs: any[] }) {
+export default function PostList({ getBlogs, mode }: { getBlogs: any[], mode: any }) {
   const params = useSearchParams();
   const nowPath = params.get('tag');
   const [nowTag, setNowTag] = useState(nowPath == null ? 'none' : nowPath);
@@ -52,6 +52,7 @@ export default function PostList({ getBlogs }: { getBlogs: any[] }) {
           description={blog.meta.description}
           image={blog.meta.image}
           tag={blog.meta.tag}
+          mode={mode.value}
         />
       ))}
       <div className={styles.button_wrap}>

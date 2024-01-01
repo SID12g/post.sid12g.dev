@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  
+
   children,
 }: {
   children: React.ReactNode
@@ -21,8 +21,8 @@ export default function RootLayout({
   let cookie = cookies().get('mode')
   return (
     <html lang="kr">
-      <body style={cookie != undefined && cookie.value == 'dark' ? {backgroundColor: '#1d1d1d', color: 'white'} : {backgroundColor: 'white'}}>
-      <NavBar />
+      <body style={cookie != undefined && cookie.value == 'dark' ? { backgroundColor: '#1d1d1d', color: 'white' } : { backgroundColor: 'white' }}>
+        <NavBar />
         {children}
         <Copyright />
       </body>

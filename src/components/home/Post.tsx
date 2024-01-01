@@ -8,9 +8,9 @@ interface PostProps {
     description: string;
     image: string;
     tag: string;
+    mode: any;
 }
-export default function Post({ link, date, title, description, image, tag }: PostProps) {
-    let mode;
+export default function Post({ link, date, title, description, image, tag, mode }: PostProps) {
     if (typeof document !== 'undefined') {
         const cookieValue = ('; ' + document.cookie).split('; mode=');
         const lastPart = cookieValue.length > 1 ? cookieValue.pop() : '';

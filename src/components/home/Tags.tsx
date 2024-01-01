@@ -3,8 +3,7 @@ import React, { useEffect, useState } from 'react';
 import styles from '../../styles/Tags.module.css';
 import { useRouter, useSearchParams } from 'next/navigation';
 
-
-function Tags({ tags }: { tags: unknown[] }) {
+function Tags({ tags, mode }: { tags: unknown[], mode: any }) {
     const [nowTag, setNowTag] = useState('none');
     const router = useRouter()
     const params = useSearchParams()
@@ -25,28 +24,17 @@ function Tags({ tags }: { tags: unknown[] }) {
             router.push(`/`)
         }
     }
-
-
-    let mode;
-
-    if (typeof document !== 'undefined') {
-        const cookieValue = ('; ' + document.cookie).split('; mode=');
-        const lastPart = cookieValue.length > 1 ? cookieValue.pop() : '';
-        mode = lastPart ? lastPart.split(';')[0] : '';
-    }
-
-
-
+    
 
 
     //// 다크모드 후 새로고침 시 태그랑 포스트가 안됨 이거 고치고, 다크모드 누르면 새로고침 되게
 
-    console.log(mode)
+    
 
     return (
         <div className={styles.wrap}>
             <p className={styles.header}>📌Tags</p>
-            <div className={mode == 'dark' ? styles.container_dark : styles.container}>
+            <div className={mode.value == 'dark' ? styles.container_dark : styles.container}>
                 <div className={styles.scroll}>
                     <div className={styles.margin_container}></div>
                     {

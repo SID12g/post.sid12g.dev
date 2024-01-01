@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <div className={cookie != undefined && cookie.value == 'dark' ? styles.wrap_dark : styles.wrap}>
       <SayHello />
-      <Tags tags={tags} />
-      <PostList getBlogs={getBlogs} />
+      <Tags tags={tags} mode={cookie} />
+      <PostList getBlogs={getBlogs} mode={cookie} />
     </div>
   )
 }

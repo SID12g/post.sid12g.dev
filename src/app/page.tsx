@@ -4,8 +4,12 @@ import { Tags } from "@/components/home/Tags";
 import PostList from "@/components/home/PostList";
 import filteredBlogs from "@/utils/getMdxPosts";
 import getTagsWithCounts from "@/utils/getMdxTags";
+import { getCookie } from "cookies-next";
+import { cookies } from "next/headers";
 
 export default function Home() {
+  let cookie = getCookie('mode', {cookies})
+  console.log(cookie)
   const tags: unknown[] = getTagsWithCounts
   const getBlogs: unknown[] = filteredBlogs
   return (

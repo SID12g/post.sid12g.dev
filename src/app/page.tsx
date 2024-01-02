@@ -7,7 +7,7 @@ import getTagsWithCounts from "@/utils/getMdxTags";
 import { getCookie } from "cookies-next";
 import { cookies } from "next/headers";
 
-export default function Home() {
+export default async function Home() {
   let cookie = getCookie('mode', {cookies})
   console.log(cookie)
   const tags: unknown[] = getTagsWithCounts

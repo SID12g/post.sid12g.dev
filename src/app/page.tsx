@@ -1,3 +1,4 @@
+'use server'
 import SayHello from "@/components/home/SayHello";
 import styles from '../styles/page.module.css'
 import { Tags } from "@/components/home/Tags";

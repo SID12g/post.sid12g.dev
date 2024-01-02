@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="kr">
       <body className={inter.className}>
-      <NavBar />
+      <NavBar mode={{value: 'dark'}} />
         {children}
         <Copyright />
       </body>

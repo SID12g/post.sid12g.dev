@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 const blogDir = "blogs";
-const files = fs.readdirSync("blogs");
+const files = fs.readdirSync(path.join(process.cwd(), blogDir));
 
 const filteredBlogs = files
     .map((filename) => {

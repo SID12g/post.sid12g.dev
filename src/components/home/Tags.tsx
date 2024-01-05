@@ -34,7 +34,7 @@ function Tags({ tags, mode }: { tags: unknown[], mode: any }) {
     return (
         <div className={styles.wrap}>
             <p className={styles.header}>📌Tags</p>
-            <div className={mode.value == 'dark' ? styles.container_dark : styles.container}>
+            <div className={mode && mode.value == 'dark' ? styles.container_dark : styles.container}>
                 <div className={styles.scroll}>
                     <div className={styles.margin_container}></div>
                     {

@@ -52,7 +52,7 @@ export default function PostList({ getBlogs, mode }: { getBlogs: any[], mode: an
           description={blog.meta.description}
           image={blog.meta.image}
           tag={blog.meta.tag}
-          mode={mode.value}
+          mode={mode && mode.value}
         />
       ))}
       <div className={styles.button_wrap}>

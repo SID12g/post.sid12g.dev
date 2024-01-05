@@ -9,6 +9,7 @@ import github_dark from '../../../public/navbar/dark/github_icon.svg';
 import sun from '../../../public/navbar/sun_icon.svg';
 import moon from '../../../public/navbar/dark/moon_icon.svg';
 import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 function ChangeDarkMode() {
   const cookieValue = ('; ' + document.cookie).split('; mode=');
@@ -23,6 +24,14 @@ function ChangeDarkMode() {
 
 export default function NavBar({ mode }: { mode: any }) {
   const router = useRouter()
+  useEffect(() => {
+    const cookieValue = ('; ' + document.cookie).split('; mode=');
+    const lastPart = cookieValue.length > 1 ? cookieValue.pop() : '';
+    const mode = lastPart ? lastPart.split(';')[0] : '';
+    if (mode === '') {
+      document.cookie = 'mode=light; path=/; max-age=' + (3600 * 24 * 400);
+    }
+  }, [])
   return (
     <div className={styles.nav_wrap} style={mode.value == 'dark' ? { backgroundColor: 'black' } : {}}>
       <Link href="/" className={styles.logo} style={mode.value == 'dark' ? { color: 'white' } : {}}>

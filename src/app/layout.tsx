@@ -20,12 +20,9 @@ export default function RootLayout({
 }) {
   let cookie: any = cookies().get('mode')
   
-  if(cookie == null) {
-    cookie = 'light'
-  }
   return (
     <html lang="kr">
-      <body style={cookie != undefined && cookie.value == 'dark' ? { backgroundColor: '#1d1d1d', color: 'white' } : { backgroundColor: 'white' }}>
+      <body style={cookie && cookie.value == 'dark' ? { backgroundColor: '#1d1d1d', color: 'white' } : { backgroundColor: 'white' }}>
         <NavBar mode={cookie} />
         {children}
         <Copyright />

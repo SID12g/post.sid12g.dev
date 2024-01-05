@@ -7,7 +7,8 @@ import getTagsWithCounts from "@/utils/getMdxTags";
 import { cookies } from 'next/headers'
 
 export default function Home() {
-  let cookie: any = cookies().get('mode')
+  let cookie: any
+  cookie = cookies().get('mode')
   const tags: unknown[] = getTagsWithCounts
   const getBlogs: unknown[] = filteredBlogs
   

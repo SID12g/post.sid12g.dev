@@ -33,7 +33,7 @@ export default function NavBar() {
     }
   }, [])
   return (
-    <div className={styles.nav_wrap} style={mode == 'dark' ? { backgroundColor: 'black' } : {}}>
+    <div className={styles.nav_wrap} style={mode == 'dark' ? { backgroundColor: '#1d1d1d' } : {}}>
       <Link href="/" className={styles.logo} style={mode == 'dark' ? { color: 'white' } : {}}>
         <p>SIIID</p>
       </Link>

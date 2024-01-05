@@ -22,7 +22,7 @@ export default function RootLayout({
   
   return (
     <html lang="kr">
-      <body style={cookie && cookie.value == 'dark' ? { backgroundColor: '#1d1d1d', color: 'white' } : { backgroundColor: 'white' }}>
+      <body style={cookie != '' && cookie.value == 'dark' ? { backgroundColor: '#1d1d1d', color: 'white' } : { backgroundColor: 'white' }}>
         <NavBar mode={cookie} />
         {children}
         <Copyright />

@@ -12,7 +12,7 @@ export default function Home() {
   const getBlogs: unknown[] = filteredBlogs
   
   return (
-    <div className={cookie && cookie.value == 'dark' ? styles.wrap_dark : styles.wrap}>
+    <div className={cookie != '' && cookie.value == 'dark' ? styles.wrap_dark : styles.wrap}>
       <SayHello />
       <Tags tags={tags} mode={cookie} />
       <PostList getBlogs={getBlogs} mode={cookie} />

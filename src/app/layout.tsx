@@ -1,11 +1,8 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import '../styles/globals.css';
 import NavBar from '@/components/navbar/NavBar';
 import Copyright from '@/components/Copyright';
 import { cookies } from 'next/headers';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: `sid12g's blog`,
@@ -17,7 +14,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const cookie: any = cookies().get('mode') || {};
+  let cookie: any
+  cookie = cookies().get('mode')
 
   return (
     <html lang="kr">
@@ -29,7 +27,7 @@ export default function RootLayout({
         }
       >
         <NavBar mode={cookie} />
-        {children}
+        {children}       
         <Copyright />
       </body>
     </html>

@@ -38,7 +38,7 @@ export default function NavBar({mode} : {mode: any}) {
         <p>SIIID</p>
       </Link>
       <div className={styles.btn_wrap}>
-        <Link href="/" className={styles.button} style={mode && mode.value == 'dark' ? { color: 'white' } : {}}>
+        <Link href="https://sid12g.dev" className={styles.button} style={mode && mode.value == 'dark' ? { color: 'white' } : {}}>
           <p>about me</p>
         </Link>
         <Link

@@ -26,7 +26,7 @@ export default function RootLayout({
             : { backgroundColor: 'white' }
         }
       >
-        <NavBar />
+        <NavBar mode={cookie} />
         {children}       
         <Copyright />
       </body>

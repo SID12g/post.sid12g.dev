@@ -11,8 +11,9 @@ const filteredBlogs = files
         return {
             meta: frontMatter,
             slug: filename.replace('.mdx', ''),
+            content: matter(fileContent).content
         };
     })
     .filter((blog) => blog.meta.tag);
-    
+
 export default filteredBlogs

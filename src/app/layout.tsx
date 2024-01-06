@@ -6,7 +6,17 @@ import { cookies } from 'next/headers';
 
 export const metadata: Metadata = {
   title: `sid12g's blog`,
-  description: `sid12g's blog`,
+  description: `Welcome to my blog.`,
+  openGraph: {
+    type: "website",
+    url: "https://blog.sid12g.dev",
+    title: "sid12g's blog",
+    description: "Welcome to my blog.",
+    siteName: "sid12g's blog",
+    images: [{
+      url: "https://blog.sid12g.dev/blog_image.png",
+    }],
+  }
 };
 
 export default function RootLayout({
@@ -27,7 +37,7 @@ export default function RootLayout({
         }
       >
         <NavBar mode={cookie} />
-        {children}       
+        {children}
         <Copyright />
       </body>
     </html>

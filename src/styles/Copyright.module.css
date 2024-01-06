@@ -7,11 +7,9 @@
 }
 
 .github_link {
-    color: black;
     text-decoration: none;
 }
 
 .github_link:hover {
-    color: #4987FF;
     text-decoration: underline;
 }

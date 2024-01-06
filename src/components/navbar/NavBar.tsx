@@ -15,14 +15,14 @@ function ChangeDarkMode() {
   const cookieValue = ('; ' + document.cookie).split('; mode=');
   const lastPart = cookieValue.length > 1 ? cookieValue.pop() : '';
   const mode = lastPart ? lastPart.split(';')[0] : '';
-  if (mode === 'light' || mode === '') {
+  if (mode === 'light') {
     document.cookie = 'mode=dark; path=/; max-age=' + (3600 * 24 * 400);
   } else if (mode === 'dark') {
     document.cookie = 'mode=light; path=/; max-age=' + (3600 * 24 * 400);
   }
 }
 
-export default function NavBar({ mode }: { mode: any }) {
+export default function NavBar({mode} : {mode: any}) {
   const router = useRouter()
   useEffect(() => {
     const cookieValue = ('; ' + document.cookie).split('; mode=');
@@ -33,28 +33,28 @@ export default function NavBar({ mode }: { mode: any }) {
     }
   }, [])
   return (
-    <div className={styles.nav_wrap} style={mode.value == 'dark' ? { backgroundColor: 'black' } : {}}>
-      <Link href="/" className={styles.logo} style={mode.value == 'dark' ? { color: 'white' } : {}}>
+    <div className={styles.nav_wrap} style={mode && mode.value == 'dark' ? { backgroundColor: '#1d1d1d' } : {}}>
+      <Link href="/" className={styles.logo} style={mode && mode.value == 'dark' ? { color: 'white' } : {}}>
         <p>SIIID</p>
       </Link>
       <div className={styles.btn_wrap}>
-        <Link href="/" className={styles.button} style={mode.value == 'dark' ? { color: 'white' } : {}}>
+        <Link href="/" className={styles.button} style={mode && mode.value == 'dark' ? { color: 'white' } : {}}>
           <p>about me</p>
         </Link>
         <Link
           href="https://www.instagram.com/clwm_222"
-          className={mode.value == 'dark' ? styles.icon_wrap_dark : styles.icon_wrap}
+          className={mode && mode.value == 'dark' ? styles.icon_wrap_dark : styles.icon_wrap}
         >
-          <Image className={styles.icon} src={mode.value == 'dark' ? instagram_dark : instagram} alt="icon" />
+          <Image className={styles.icon} src={mode && mode.value == 'dark' ? instagram_dark : instagram} alt="icon" />
         </Link>
-        <Link href="https://github.com/SID12g" className={mode.value == 'dark' ? styles.icon_wrap_dark : styles.icon_wrap}>
-          <Image className={styles.icon} src={mode.value == 'dark' ? github_dark : github} alt="icon" />
+        <Link href="https://github.com/SID12g" className={mode && mode.value == 'dark' ? styles.icon_wrap_dark : styles.icon_wrap}>
+          <Image className={styles.icon} src={mode && mode.value == 'dark' ? github_dark : github} alt="icon" />
         </Link>
-        <div className={mode.value == 'dark' ? styles.icon_wrap_dark : styles.icon_wrap} onClick={() => {
+        <div className={mode && mode.value == 'dark' ? styles.icon_wrap_dark : styles.icon_wrap} onClick={() => {
           ChangeDarkMode()
           router.refresh()
         }}>
-          <Image className={styles.mode} src={mode.value == 'dark' ? moon : sun} alt="icon" />
+          <Image className={styles.mode} src={mode && mode.value == 'dark' ? moon : sun} alt="icon" />
         </div>
       </div>
     </div>

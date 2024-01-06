@@ -21,6 +21,18 @@
     overflow: hidden;
 }
 
+.content_dark {
+    background-color: #464646;
+    border-radius: 10px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s;
+    overflow: hidden;
+    color: white;
+    border: 1px white solid;
+}
+
 .margin_container {
     height: 34px;
 }
@@ -90,6 +102,7 @@
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 20px;
+    color: black;
 }
 
 .img_wrap {
@@ -118,11 +131,16 @@
     .image {
         width: 100%;
         height: auto;
+        aspect-ratio: 16/9;
         border-radius: 5px;
         object-fit: cover;
     }
 
     .content {
+        flex-direction: column-reverse
+    }
+
+    .content_dark {
         flex-direction: column-reverse
     }
 

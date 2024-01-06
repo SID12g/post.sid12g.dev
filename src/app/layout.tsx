@@ -4,20 +4,6 @@ import NavBar from '@/components/navbar/NavBar';
 import Copyright from '@/components/Copyright';
 import { cookies } from 'next/headers';
 
-export const metadata: Metadata = {
-  title: `sid12g's blog`,
-  description: `Welcome to my blog.`,
-  openGraph: {
-    type: "website",
-    url: "https://blog.sid12g.dev",
-    title: "sid12g's blog",
-    description: "Welcome to my blog.",
-    siteName: "sid12g's blog",
-    images: [{
-      url: "https://blog.sid12g.dev/blog_image.png",
-    }],
-  }
-};
 
 export default function RootLayout({
   children,
@@ -26,7 +12,7 @@ export default function RootLayout({
 }) {
   let cookie: any
   cookie = cookies().get('mode')
-
+  console.log(children)
   return (
     <html lang="kr">
       <body

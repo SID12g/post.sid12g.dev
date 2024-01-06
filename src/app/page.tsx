@@ -16,6 +16,12 @@ export default function Home() {
 
   return (
     <div className={cookie.value === 'dark' ? styles.wrap_dark : styles.wrap}>
+      <meta property='og:title' content={`sid12g's blog`} />
+      <meta property='og:description' content={'Welcome to my blog'} />
+      <meta property='og:url' content={`https://blog.sid12g.dev`} />
+      <meta property='og:image' content={`https://blog.sid12g.dev/blog_image.png`} />
+      <meta property='og:type' content='article' />
+      <title>{`sid12g's blog`}</title>
       <SayHello />
       <Tags tags={tags} mode={cookie} />
       <PostList getBlogs={getBlogs} mode={cookie} />

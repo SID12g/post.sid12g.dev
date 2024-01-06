@@ -5,11 +5,14 @@ import styles from '../../../styles/PostsSlug.module.css'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import Image from 'next/image'
 import "@/styles/highlight-js/github-dark.css"
-import rehypeHighlight from 'rehype-highlight';
+import rehypeHighlight from 'rehype-highlight'
 import CopyButton from '@/components/postSlug/CopyButton'
 import ProgressBar from '@/components/postSlug/ProgressBar'
 import Comments from '@/components/postSlug/Comments'
 import Link from 'next/link'
+import { Metadata } from 'next'
+
+
 
 const options: any = {
     mdxOptions: {
@@ -41,11 +44,16 @@ function getPost({ slug }: { slug: string }) {
 
 export default function Post({ params }: any) {
     const props = getPost(params);
-    
+
     return (
         <div>
             <ProgressBar />
             <div>
+                <meta property='og:title' content={`${props.frontMatter.title} | sid12g's blog`} />
+                <meta property='og:description' content={props.frontMatter.description} />
+                <meta property='og:url' content={`https://blog.sid12g.dev/${params.slug}`} />
+                <meta property='og:image' content={`https://blog.sid12g.dev${props.frontMatter.image}`} />
+                <meta property='og:type' content='article' />
                 <title>{props.frontMatter.title}</title>
                 <article className={styles.wrap}>
                     <Link className={styles.tag_wrap} href={'/?tag='+props.frontMatter.tag}><p className={styles.tag}>{props.frontMatter.tag}</p></Link>

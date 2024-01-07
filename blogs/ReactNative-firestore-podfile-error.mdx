@@ -10,16 +10,16 @@ tag : React Native
 
 > 해당 포스트 확인하기 : [firebase를 iOS에 적용하면서 맞닦들인 문제들](https://velog.io/@qkr135qkr/firebase%EB%A5%BC-iOS%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EB%A9%B4%EC%84%9C-%EB%A7%9E%EB%8B%A6%EB%93%A4%EC%9D%B8-%EB%AC%B8%EC%A0%9C%EB%93%A4)
 
-해당 포스에는 
+해당 포스트에는 
 
-```
+``` error
 The Swift pod `FirebaseCoreInternal` depends upon `GoogleUtilities`, which does not define modules.
 To opt into those targets generating module maps (which is necessary to import them from Swift when building as static libraries), you may set `use_modular_headers!` globally in your Podfile, or specify `:modular_headers => true` for particular dependencies.
 ```
 
 와 같은 문제가 발생하였고
 
-```
+``` error
 podfile에 use_native_modules! 아래에
 
 pod 'GoogleUtilities', :modular_headers => true

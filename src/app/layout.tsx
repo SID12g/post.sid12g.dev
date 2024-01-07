@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import '../styles/globals.css';
 import NavBar from '@/components/navbar/NavBar';
 import Copyright from '@/components/Copyright';
@@ -12,7 +11,6 @@ export default function RootLayout({
 }) {
   let cookie: any
   cookie = cookies().get('mode')
-  console.log(children)
   return (
     <html lang="kr">
       <body

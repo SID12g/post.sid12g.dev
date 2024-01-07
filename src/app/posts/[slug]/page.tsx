@@ -10,9 +10,6 @@ import CopyButton from '@/components/postSlug/CopyButton'
 import ProgressBar from '@/components/postSlug/ProgressBar'
 import Comments from '@/components/postSlug/Comments'
 import Link from 'next/link'
-import { Metadata } from 'next'
-
-
 
 const options: any = {
     mdxOptions: {

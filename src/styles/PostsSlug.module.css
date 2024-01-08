@@ -210,7 +210,7 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
-    border: 1px white solid;
+    box-shadow: 0 0 2px;
 }
 
 

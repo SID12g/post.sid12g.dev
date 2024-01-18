@@ -41,7 +41,6 @@ function getPost({ slug }: { slug: string }) {
 
 export default function Post({ params }: any) {
     const props = getPost(params);
-
     return (
         <div>
             <ProgressBar />

@@ -1,11 +1,12 @@
 'use client'
+import { useRouter } from 'next/navigation';
 import { useEffect, useRef } from 'react';
 
-export default function Comments({mode}: {mode: any}) {
+export default function Comments({theme}: {theme: any}) {
   const ref = useRef<HTMLDivElement>(null);
-
+  const router = useRouter()
   useEffect(() => {
-    console.log(mode)
+    console.log(theme)
     // const cookieValue = ('; ' + document.cookie).split('; mode=');
     // const lastPart = cookieValue.length > 1 ? cookieValue.pop() : '';
     // const mode = lastPart ? lastPart.split(';')[0] : '';
@@ -23,9 +24,9 @@ export default function Comments({mode}: {mode: any}) {
     scriptElem.setAttribute('data-reactions-enabled', '1');
     scriptElem.setAttribute('data-emit-metadata', '0');
     scriptElem.setAttribute('data-input-position', 'bottom');
-    scriptElem.setAttribute('data-theme', mode && mode.value == 'light' ? 'light' : 'noborder_gray');
+    scriptElem.setAttribute('data-theme', theme);
     scriptElem.setAttribute('data-lang', 'ko');
     ref.current.appendChild(scriptElem);
-  }, []);
+  }, [theme]);
   return <section style={{ width: '86%', marginLeft: 'auto', marginRight: 'auto', padding: '7%' }} ref={ref} />;
 }

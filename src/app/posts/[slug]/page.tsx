@@ -43,7 +43,7 @@ function getPost({ slug }: { slug: string }) {
 export default function Post({ params }: any) {
     const props = getPost(params);
     const cookie = cookies().get('mode')
-    console.log(cookie)
+    var theme = cookie?.value == 'dark' ? 'noborder_gray':'light'
     return (
         <div>
             <ProgressBar />
@@ -67,7 +67,7 @@ export default function Post({ params }: any) {
                     </div>
                 </article>
                 <CopyButton />
-                <Comments mode={cookie} />
+                <Comments theme={theme} />
             </div>
         </div>
     )

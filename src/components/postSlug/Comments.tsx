@@ -1,32 +1,24 @@
 'use client'
-import { useRouter } from 'next/navigation';
-import { useEffect, useRef } from 'react';
+import Giscus from '@giscus/react';
 
-export default function Comments({theme}: {theme: any}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const router = useRouter()
-  useEffect(() => {
-    console.log(theme)
-    // const cookieValue = ('; ' + document.cookie).split('; mode=');
-    // const lastPart = cookieValue.length > 1 ? cookieValue.pop() : '';
-    // const mode = lastPart ? lastPart.split(';')[0] : '';
-    if (!ref.current || ref.current.hasChildNodes()) return;
-    const scriptElem = document.createElement('script');
-    scriptElem.src = 'https://giscus.app/client.js';
-    scriptElem.async = true;
-    scriptElem.crossOrigin = 'anonymous';
-    scriptElem.setAttribute('data-repo', 'SID12g/blog.sid12g.dev');
-    scriptElem.setAttribute('data-repo-id', 'R_kgDOKwpObA');
-    scriptElem.setAttribute('data-category', 'Blogs Comments');
-    scriptElem.setAttribute('data-category-id', 'DIC_kwDOKwpObM4CboCB');
-    scriptElem.setAttribute('data-mapping', 'title');
-    scriptElem.setAttribute('data-strict', '0');
-    scriptElem.setAttribute('data-reactions-enabled', '1');
-    scriptElem.setAttribute('data-emit-metadata', '0');
-    scriptElem.setAttribute('data-input-position', 'bottom');
-    scriptElem.setAttribute('data-theme', theme);
-    scriptElem.setAttribute('data-lang', 'ko');
-    ref.current.appendChild(scriptElem);
-  }, [theme]);
-  return <section style={{ width: '86%', marginLeft: 'auto', marginRight: 'auto', padding: '7%' }} ref={ref} />;
+export default function Comments({ theme }: { theme: any }) {
+  return (
+    <div style={{ width: '86%', marginLeft: 'auto', marginRight: 'auto', padding: '7%' }}>
+      <Giscus
+        id="comments"
+        repo="SID12g/blog.sid12g.dev"
+        repoId="R_kgDOKwpObA"
+        category="Blogs Comments"
+        categoryId="DIC_kwDOKwpObM4CboCB"
+        mapping="title"
+        term="Welcome to @giscus/react component!"
+        reactionsEnabled="1"
+        emitMetadata="0"
+        inputPosition="top"
+        theme={theme}
+        lang="ko"
+        loading="lazy"
+      />
+    </div>
+  )
 }

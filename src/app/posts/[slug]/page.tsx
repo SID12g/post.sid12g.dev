@@ -10,6 +10,7 @@ import CopyButton from '@/components/postSlug/CopyButton'
 import ProgressBar from '@/components/postSlug/ProgressBar'
 import Comments from '@/components/postSlug/Comments'
 import Link from 'next/link'
+import { cookies } from 'next/headers'
 
 const options: any = {
     mdxOptions: {
@@ -41,6 +42,8 @@ function getPost({ slug }: { slug: string }) {
 
 export default function Post({ params }: any) {
     const props = getPost(params);
+    const cookie = cookies().get('mode')
+    console.log(cookie)
     return (
         <div>
             <ProgressBar />
@@ -64,7 +67,7 @@ export default function Post({ params }: any) {
                     </div>
                 </article>
                 <CopyButton />
-                <Comments />
+                <Comments mode={cookie} />
             </div>
         </div>
     )

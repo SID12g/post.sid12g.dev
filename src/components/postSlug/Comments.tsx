@@ -1,13 +1,14 @@
 'use client'
 import { useEffect, useRef } from 'react';
 
-export default function Comments() {
+export default function Comments({mode}: {mode: any}) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const cookieValue = ('; ' + document.cookie).split('; mode=');
-    const lastPart = cookieValue.length > 1 ? cookieValue.pop() : '';
-    const mode = lastPart ? lastPart.split(';')[0] : '';
+    console.log(mode)
+    // const cookieValue = ('; ' + document.cookie).split('; mode=');
+    // const lastPart = cookieValue.length > 1 ? cookieValue.pop() : '';
+    // const mode = lastPart ? lastPart.split(';')[0] : '';
     if (!ref.current || ref.current.hasChildNodes()) return;
     const scriptElem = document.createElement('script');
     scriptElem.src = 'https://giscus.app/client.js';
@@ -22,7 +23,7 @@ export default function Comments() {
     scriptElem.setAttribute('data-reactions-enabled', '1');
     scriptElem.setAttribute('data-emit-metadata', '0');
     scriptElem.setAttribute('data-input-position', 'bottom');
-    scriptElem.setAttribute('data-theme', mode && mode == 'light' ? 'light' : 'noborder_gray');
+    scriptElem.setAttribute('data-theme', mode && mode.value == 'light' ? 'light' : 'noborder_gray');
     scriptElem.setAttribute('data-lang', 'ko');
     ref.current.appendChild(scriptElem);
   }, []);

@@ -1,98 +1,97 @@
 .nav_wrap {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    box-shadow: 0 0 2px;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 0 2px;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
 .btn_wrap {
-    display: flex;
-    align-items: center;
-    margin-right: 30px;
-    display: flex;
-
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  display: flex;
 }
 
 .logo {
-    font-size: 1.5rem;
-    margin-left: 36px;
-    font-family: 'Pretendard';
-    font-weight: 600;
-    color: black;
-    text-decoration: none;
+  font-size: 1.5rem;
+  margin-left: 36px;
+  font-family: "Pretendard";
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
 }
 
 .logo:hover {
-    text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 
 .icon_wrap {
-    width: 24px;
-    height: 24px;
-    margin-left: 13px;
-    padding: 3px;
-    border-radius: 100px;
-    transition: all 0.3s;
+  width: 24px;
+  height: 24px;
+  margin-left: 13px;
+  padding: 3px;
+  border-radius: 100px;
+  transition: all 0.3s;
 }
 
 .icon_wrap_dark {
-    width: 24px;
-    height: 24px;
-    margin-left: 13px;
-    padding: 3px;
-    border-radius: 100px;
-    transition: all 0.3s;
+  width: 24px;
+  height: 24px;
+  margin-left: 13px;
+  padding: 3px;
+  border-radius: 100px;
+  transition: all 0.3s;
 }
 
 .icon_wrap:hover {
-    background-color: rgb(241, 241, 241);
+  background-color: rgb(241, 241, 241);
 }
 
 .icon_wrap_dark:hover {
-    background-color: rgb(68, 68, 68);
+  background-color: rgb(68, 68, 68);
 }
 
 .icon {
-    width: 24px;
-    height: 24px;
-    border-radius: 30px;
-    fill: #333
+  width: 24px;
+  height: 24px;
+  border-radius: 30px;
+  fill: #333;
 }
 
 .button {
-    font-size: 1rem;
-    font-family: 'Pretendard';
-    font-weight: 500;
-    text-decoration: none;
-    color: black;
-    width: 70px;
-    height: 20px;
+  font-size: 1rem;
+  font-family: "Pretendard";
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+  width: 70px;
+  height: 20px;
 }
 
 .button:hover {
-    text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 
 .mode {
-    width: 20px;
-    height: 20px;
-    padding: 2px;
-    border-radius: 100px;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  border-radius: 100px;
 }
 
 /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-@media (max-width:480px) {
-    .icon {
-        display: none;
-    }
+@media (max-width: 480px) {
+  .icon {
+    display: none;
+  }
 
-    .button {
-        display: none;
-    }
+  .button {
+    display: none;
+  }
 }

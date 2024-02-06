@@ -1,36 +1,35 @@
 .share_wrap {
-    display: flex;
-    justify-content: center;
-    transition: all 0.3s;
-    margin-top: 100px;
-    height: 50px;
-    margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s;
+  margin-top: 100px;
+  height: 50px;
+  margin-bottom: 100px;
 }
 
 .share_wrap:hover {
-    filter:brightness(0.9)
+  filter: brightness(0.9);
 }
 
 .share_container {
-    width: 90%;
-    height: 50px;
-    display: flex;
-    background-color: #FBF198;
-    border-radius: 20px;
-    justify-content: center;
-    align-items: center;
+  width: 90%;
+  height: 50px;
+  display: flex;
+  background-color: #fbf198;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .share_icon {
-    width: 17px;
-    margin-right: 10px;
-    height: 17px;
+  width: 17px;
+  margin-right: 10px;
+  height: 17px;
 }
 
 .share_text {
-    font-family: 'Pretendard';
-    font-weight: 600; 
-    font-size: 1rem;
-    color: black;
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-size: 1rem;
+  color: black;
 }
-

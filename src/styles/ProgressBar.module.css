@@ -1,7 +1,7 @@
 .status {
-    height: 0.4rem;
-    background-color: #FFDB5D;
-    position: fixed;
-    margin-top: -40px;
-    /* remove transition 0.3s */
+  height: 0.4rem;
+  background-color: #ffdb5d;
+  position: fixed;
+  margin-top: -40px;
+  /* remove transition 0.3s */
 }

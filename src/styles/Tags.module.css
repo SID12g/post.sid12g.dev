@@ -1,97 +1,97 @@
 .wrap {
-    margin-top: 34px;
+  margin-top: 34px;
 }
 
 .header {
-    font-size: 1.5rem;
-    font-family: 'Pretendard';
-    font-weight: 600;
-    display: flex;
+  font-size: 1.5rem;
+  font-family: "Pretendard";
+  font-weight: 600;
+  display: flex;
 }
 
 .container_dark {
-    background-color: #4c4c4c;
-    height: 56px;
-    margin-top: 29px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    border: 1px white solid;
+  background-color: #4c4c4c;
+  height: 56px;
+  margin-top: 29px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  border: 1px white solid;
 }
 
 .container {
-    background-color: #f4f4f4;
-    height: 56px;
-    margin-top: 29px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 0 2px;
+  background-color: #f4f4f4;
+  height: 56px;
+  margin-top: 29px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 2px;
 }
 
 .scroll {
-    width: 100%;
-    display: flex;
-    overflow: scroll;
-    scrollbar-width: none;
+  width: 100%;
+  display: flex;
+  overflow: scroll;
+  scrollbar-width: none;
 }
 
 .margin_container {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .scroll::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .now_tag {
-    background-color: #c5c5c5;
-    width: auto;
-    height: 25px;
-    display: flex;
-    border-radius: 18px;
-    font-size: 1rem;
-    font-family: 'Pretendard';
-    font-weight: 500;
-    align-items: center;
-    justify-content: center;
-    clear: both;
-    float: left;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: 10px;
-    white-space: nowrap; 
-    transition: all 0.3s;
-    cursor: pointer;
-    color: black;
+  background-color: #c5c5c5;
+  width: auto;
+  height: 25px;
+  display: flex;
+  border-radius: 18px;
+  font-size: 1rem;
+  font-family: "Pretendard";
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  clear: both;
+  float: left;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 10px;
+  white-space: nowrap;
+  transition: all 0.3s;
+  cursor: pointer;
+  color: black;
 }
 
 .tag {
-    background-color: #FBF198;
-    width: auto;
-    height: 25px;
-    display: flex;
-    border-radius: 18px;
-    font-size: 1rem;
-    font-family: 'Pretendard';
-    font-weight: 500;
-    align-items: center;
-    justify-content: center;
-    clear: both;
-    float: left;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: 10px;
-    white-space: nowrap; 
-    transition: all 0.3s;
-    cursor: pointer;
-    color: black;
+  background-color: #fbf198;
+  width: auto;
+  height: 25px;
+  display: flex;
+  border-radius: 18px;
+  font-size: 1rem;
+  font-family: "Pretendard";
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  clear: both;
+  float: left;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 10px;
+  white-space: nowrap;
+  transition: all 0.3s;
+  cursor: pointer;
+  color: black;
 }
 
 .tag:hover {
-    filter: brightness(0.8);
+  filter: brightness(0.8);
 }

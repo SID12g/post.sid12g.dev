@@ -1,50 +1,49 @@
 .wrap {
-    margin-top: 53px;
+  margin-top: 53px;
 }
 
 .container {
-    background-color: #FBF198;
-    border-radius: 10px;
-    display: flex;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
+  background-color: #fbf198;
+  border-radius: 10px;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .header {
-    margin-top: 100px;
-    font-size: 1.5rem;
-    font-family: 'Pretendard';
-    font-weight: 600;
-    display: flex;
-    margin-bottom: 34px;
+  margin-top: 100px;
+  font-size: 1.5rem;
+  font-family: "Pretendard";
+  font-weight: 600;
+  display: flex;
+  margin-bottom: 34px;
 }
 
 .content {
-    font-size: 1rem;
-    font-family: 'Pretendard';
-    font-weight: 500;
-    color: black;
+  font-size: 1rem;
+  font-family: "Pretendard";
+  font-weight: 500;
+  color: black;
 }
 
-.content a{
-    font-size: 1rem;
-    font-family: 'Pretendard';
-    font-weight: 500;
-    color: black;
-    text-decoration: none;
+.content a {
+  font-size: 1rem;
+  font-family: "Pretendard";
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
 }
 
-.content a:hover{
-    font-size: 1rem;
-    font-family: 'Pretendard';
-    font-weight: 600;
+.content a:hover {
+  font-size: 1rem;
+  font-family: "Pretendard";
+  font-weight: 600;
 }
-
 
 .icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
 }

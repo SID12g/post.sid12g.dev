@@ -1,15 +1,15 @@
 .text {
-    font-family: 'Pretendard';
-    font-weight: 400;
-    text-align: center;
-    margin-top: 250px;
-    margin-bottom: 20px;
+  font-family: "Pretendard";
+  font-weight: 400;
+  text-align: center;
+  margin-top: 250px;
+  margin-bottom: 20px;
 }
 
 .github_link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .github_link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }

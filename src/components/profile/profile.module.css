@@ -1,0 +1,40 @@
+.container {
+  width: 290px;
+  height: 405px;
+  background-color: black;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.image {
+  margin-top: 125px;
+}
+
+.name {
+  font-size: 24px;
+  font-family: "Pretendard SemiBold";
+  color: white;
+  margin-top: 42px;
+  margin-bottom: 0px;
+}
+
+.button {
+  text-decoration: none;
+}
+
+.email {
+  font-size: 16px;
+  font-family: "Pretendard Regular";
+  color: #d9d9d9;
+  margin-top: 4px;
+  transition: all 0.3s;
+  width: 135px;
+  padding: 4px 8px 4px 8px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+
+.email:hover {
+  background-color: #414141;
+}

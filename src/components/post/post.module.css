@@ -1,0 +1,21 @@
+.image {
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.title {
+  font-size: 24px;
+  font-family: "Pretendard SemiBold";
+  margin: 16px 0px 4px 0px;
+}
+
+.description {
+  font-size: 16px;
+  font-family: "Pretendard Regular";
+  margin: 0px 0px 8px 0px;
+  color: #868b94;
+}
+
+.info {
+  display: flex;
+}

@@ -1,0 +1,8 @@
+.date {
+  font-size: 14px;
+  font-family: "Pretendard Regular";
+  border: 1px black solid;
+  border-radius: 20px;
+  padding: 8px 12px 8px 12px;
+  text-align: center;
+}

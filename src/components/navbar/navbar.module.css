@@ -23,7 +23,7 @@
   border-radius: 100px;
   width: 40px;
   height: 40px;
-  margin-right: 36px;
+  margin-right: 26px;
   transition: all 0.3s;
 }
 
@@ -33,6 +33,6 @@
 
 .tags {
   text-decoration: none;
-  margin-right: 36px;
+  margin-right: 26px;
   padding: 10px;
 }

@@ -1,0 +1,109 @@
+.container {
+  width: 720px;
+  height: 405px;
+  transition: all 0.5s;
+}
+
+.container:hover {
+  .content {
+    filter: brightness(0.5);
+  }
+
+  .textWrap {
+    animation: sliderbottom 1s;
+    opacity: 0;
+  }
+
+  .info {
+    opacity: 1;
+  }
+}
+
+.info {
+  width: 720px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  margin-top: 24px;
+  opacity: 0;
+  transition: all 0.5s;
+  z-index: 5;
+  justify-content: space-between;
+}
+
+.tag {
+  color: white;
+  font-size: 16px;
+  font-family: "Pretendard SemiBold";
+  padding: 8px 12px 8px 12px;
+  border-radius: 20px;
+  border: 2px white solid;
+  margin-left: 24px;
+}
+
+.arrow {
+  background-color: white;
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  margin-right: 24px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-top: 4px;
+}
+
+.content {
+  transition: all 0.5s;
+}
+
+.textWrap {
+  position: absolute;
+  margin: 323px 0px 0px 40px;
+  animation: slidertop 1s;
+}
+
+.description {
+  font-size: 16px;
+  font-family: "Pretendard Regular";
+  color: #868b94;
+  margin: 0px;
+  z-index: 5;
+}
+
+.title {
+  font-size: 32px;
+  font-family: "Pretendard SemiBold";
+  margin-top: 0px;
+  z-index: 5;
+}
+
+.image {
+  object-fit: cover;
+  border-radius: 45px;
+}
+
+@keyframes slidertop {
+  0% {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes sliderbottom {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+}

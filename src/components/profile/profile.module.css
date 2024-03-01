@@ -4,6 +4,7 @@
   background-color: black;
   border-radius: 50px;
   text-align: center;
+  margin-left: 40px;
 }
 
 .image {
@@ -37,4 +38,10 @@
 
 .email:hover {
   background-color: #414141;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    display: none;
+  }
 }

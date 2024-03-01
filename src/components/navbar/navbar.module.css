@@ -3,8 +3,8 @@
   box-shadow: 0 0 2px;
   background-color: white;
   height: 70px;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -16,6 +16,31 @@
 }
 
 .logo:hover {
+  text-decoration-line: underline;
+}
+
+.buttonWrap {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  align-items: center;
+  width: 56px;
+  height: 24px;
+  text-decoration: none;
+  margin: 0px 16px 0px 0px;
+}
+
+.about {
+  font-size: 20px;
+  font-family: "Pretendard";
+  color: black;
+  font-weight: 500;
+  margin: 0;
+}
+
+.about:hover {
   text-decoration-line: underline;
 }
 

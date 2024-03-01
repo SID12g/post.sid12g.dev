@@ -4,9 +4,17 @@ import Next from "@/../public/next.png";
 import Date from "../date/date";
 import Tag from "../tag/tag";
 
-export default function Post() {
+export default function Post({
+  title,
+  description,
+  date,
+}: {
+  title: string;
+  description: string;
+  date: string;
+}) {
   return (
-    <div>
+    <div className={styles.container}>
       <Image
         className={styles.image}
         src={Next}
@@ -14,12 +22,10 @@ export default function Post() {
         width={480}
         height={270}
       />
-      <h2 className={styles.title}>NEXT.JS 14 업데이트 살펴보기</h2>
-      <p className={styles.description}>
-        13 버전과 비교하며 서버기능 살펴보자!
-      </p>
+      <h2 className={styles.title}>{title}</h2>
+      <p className={styles.description}>1{description}</p>
       <div className={styles.info}>
-        <Date date="2024-01-29" />
+        <Date date={date} />
         <Tag border="black" background="black" color="white" tag="NEXT" />
       </div>
     </div>

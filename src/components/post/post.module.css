@@ -1,6 +1,18 @@
+.container {
+  margin-top: 48px;
+  width: 480px;
+}
+
+.container:hover {
+  .image {
+    transform: translateY(-10%);
+  }
+}
+
 .image {
   object-fit: cover;
   border-radius: 30px;
+  transition: all 0.5s;
 }
 
 .title {

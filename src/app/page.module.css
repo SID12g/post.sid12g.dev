@@ -1,0 +1,71 @@
+.main {
+  width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top {
+  height: 475px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newText {
+  font-size: 28px;
+  font-family: "Pretendard SemiBold";
+  color: black;
+  margin: 48px 0px 0px 0px;
+}
+
+.topContent {
+  display: flex;
+  margin-top: 32px;
+  justify-content: center;
+}
+
+.bottom {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.allText {
+  font-size: 28px;
+  font-family: "Pretendard SemiBold";
+  color: black;
+  margin: 60px 0px 0px 0px;
+}
+
+.singlePost {
+  width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.doublePost {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 1200px) {
+  .singlePost {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main {
+    width: 90%;
+  }
+
+  .top {
+    width: 720px;
+  }
+
+  .bottom {
+    width: 720px;
+  }
+
+  .doublePost {
+    display: none;
+  }
+}

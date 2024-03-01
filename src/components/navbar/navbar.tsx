@@ -9,15 +9,20 @@ export default function Navbar() {
       <Link className={styles.logo} href="/">
         <p>SIIID</p>
       </Link>
-      <Link className={styles.button} href="/tags/all">
-        <Image
-          className={styles.tags}
-          src={hash}
-          alt="hash"
-          width={20}
-          height={20}
-        />
-      </Link>
+      <div className={styles.buttonWrap}>
+        <Link className={styles.link} href="https://sid12g.dev">
+          <p className={styles.about}>About</p>
+        </Link>
+        <Link className={styles.button} href="/tags/all">
+          <Image
+            className={styles.tags}
+            src={hash}
+            alt="hash"
+            width={20}
+            height={20}
+          />
+        </Link>
+      </div>
     </div>
   );
 }

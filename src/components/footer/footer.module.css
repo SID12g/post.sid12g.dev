@@ -10,6 +10,7 @@
   margin-left: 10px;
   font-size: 16px;
   font-family: "Pretendard Regular";
+  margin: 0;
 }
 
 .iconWrap {
@@ -32,4 +33,20 @@
 
 .link:hover {
   background-color: #ebebeb;
+}
+
+@media (max-width: 482px) {
+  .container {
+    display: flow-root;
+    height: 80px;
+  }
+
+  .copyright {
+    margin: 0;
+    text-align: center;
+  }
+
+  .iconWrap {
+    justify-content: center;
+  }
 }

@@ -37,6 +37,12 @@
   display: flex;
 }
 
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1200px) {
   .container {
     width: 100%;

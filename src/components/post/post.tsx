@@ -17,7 +17,7 @@ export default function Post({
     <div className={styles.container}>
       <Image className={styles.image} src={Next} alt="Thumbnail" />
       <h2 className={styles.title}>{title}</h2>
-      <p className={styles.description}>1{description}</p>
+      <p className={styles.description}>{description}</p>
       <div className={styles.info}>
         <Date date={date} />
         <Tag border="black" background="black" color="white" tag="NEXT" />

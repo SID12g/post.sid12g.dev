@@ -84,7 +84,6 @@
 .image {
   width: 720px;
   height: 405px;
-  aspect-ratio: 16/9;
   object-fit: cover;
   border-radius: 45px;
 }
@@ -108,5 +107,22 @@
   100% {
     transform: translateY(40%);
     opacity: 0;
+  }
+}
+
+@media (max-width: 767px) {
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+
+  .info {
+    width: 81%;
+  }
+
+  .image {
+    width: 100%;
   }
 }

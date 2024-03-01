@@ -1,5 +1,5 @@
 .main {
-  width: 1050px;
+  width: 1020px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -8,6 +8,7 @@
   height: 475px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 60px;
 }
 
 .newText {
@@ -32,22 +33,27 @@
   font-size: 28px;
   font-family: "Pretendard SemiBold";
   color: black;
-  margin: 60px 0px 0px 0px;
+  margin: 0px;
 }
 
 .singlePost {
-  width: 480px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .doublePost {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .singlePost {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .doublePost {
     display: none;
   }
 }
@@ -58,14 +64,17 @@
   }
 
   .top {
-    width: 720px;
+    width: 90%;
+    background-color: aqua;
   }
 
   .bottom {
-    width: 720px;
+    width: 90%;
   }
+}
 
-  .doublePost {
-    display: none;
+@media (max-width: 1150px) {
+  .main {
+    width: 90%;
   }
 }

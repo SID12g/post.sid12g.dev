@@ -82,6 +82,9 @@
 }
 
 .image {
+  width: 720px;
+  height: 405px;
+  aspect-ratio: 16/9;
   object-fit: cover;
   border-radius: 45px;
 }

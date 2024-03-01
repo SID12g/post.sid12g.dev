@@ -15,13 +15,7 @@ export default function Post({
 }) {
   return (
     <div className={styles.container}>
-      <Image
-        className={styles.image}
-        src={Next}
-        alt="Thumbnail"
-        width={480}
-        height={270}
-      />
+      <Image className={styles.image} src={Next} alt="Thumbnail" />
       <h2 className={styles.title}>{title}</h2>
       <p className={styles.description}>1{description}</p>
       <div className={styles.info}>

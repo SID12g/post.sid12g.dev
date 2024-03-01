@@ -91,9 +91,8 @@ export default function Home() {
             />
           ))}
         </div>
-
         <div className={styles.doublePost}>
-          <div>
+          <div style={{ width: "50%" }}>
             {list1.map((post, index) => (
               <Post
                 title={post.title}
@@ -103,8 +102,8 @@ export default function Home() {
               />
             ))}
           </div>
-
-          <div>
+          <div style={{ width: 60 }}></div>
+          <div style={{ width: "50%" }}>
             {list2.map((post, index) => (
               <Post
                 title={post.title}

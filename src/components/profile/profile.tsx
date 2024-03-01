@@ -6,7 +6,6 @@ import Link from "next/link";
 export default function Profile() {
   return (
     <div className={styles.container}>
-      <div style={{ width: 40 }} />
       <Image
         className={styles.image}
         src={cat}

@@ -25,13 +25,7 @@ export default function NewPost() {
           </p>
           <h1 className={styles.title}>NEXT.JS 14 업데이트 살펴보기</h1>
         </div>
-        <Image
-          className={styles.image}
-          src={Next}
-          alt="new post"
-          width={720}
-          height={405}
-        />
+        <Image className={styles.image} src={Next} alt="new post" />
       </div>
     </div>
   );

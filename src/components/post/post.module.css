@@ -1,6 +1,8 @@
 .container {
   margin-top: 48px;
   width: 480px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container:hover {
@@ -10,6 +12,9 @@
 }
 
 .image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
   object-fit: cover;
   border-radius: 30px;
   transition: all 0.5s;
@@ -30,4 +35,10 @@
 
 .info {
   display: flex;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
 }

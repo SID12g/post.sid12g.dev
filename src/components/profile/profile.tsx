@@ -13,7 +13,7 @@ export default function Profile() {
         width={128}
         height={128}
       />
-      <p className={styles.name}>CHO SUNG MIN</p>
+      <h3 className={styles.name}>CHO SUNG MIN</h3>
       <Link className={styles.button} href="mailto:sid12g@naver.com">
         <p className={styles.email}>sid12g@naver.com</p>
       </Link>

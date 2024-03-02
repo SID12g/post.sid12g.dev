@@ -60,7 +60,7 @@
 
 @media (max-width: 1200px) {
   .main {
-    width: 90%;
+    width: 100%;
   }
 
   .top {
@@ -69,12 +69,6 @@
   }
 
   .bottom {
-    width: 90%;
-  }
-}
-
-@media (max-width: 1150px) {
-  .main {
     width: 90%;
   }
 }

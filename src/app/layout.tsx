@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "sid12g's blog",
   description: "조성민의 블로그에 오신 것을 환영합니다.",
+  formatDetection: { telephone: false },
 };
 
 export default function RootLayout({

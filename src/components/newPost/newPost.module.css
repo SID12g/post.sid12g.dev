@@ -132,8 +132,8 @@
 
   .textWrap {
     margin: 0;
-    margin-top: 196px;
-    margin-left: 20px;
+    margin-top: 194px;
+    margin-left: 30px;
   }
 
   .title {
@@ -161,6 +161,6 @@
   }
 
   .textWrap {
-    width: 90%;
+    width: 88%;
   }
 }

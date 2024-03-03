@@ -10,7 +10,9 @@ export default function Footer() {
   var year = new Date().getFullYear();
   return (
     <div className={styles.container}>
-      <p className={styles.copyright}>ⓒ {year} sid12g All rights reserved.</p>
+      <p className={styles.copyright}>
+        Copyright ⓒ {year} sid12g All rights reserved.
+      </p>
       <div className={styles.iconWrap}>
         <Link className={styles.link} href="mailto:sid12g@naver.com">
           <Image className={styles.icon} src={at} alt="at" />

@@ -56,6 +56,10 @@
   .doublePost {
     display: none;
   }
+
+  .top {
+    height: 320px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -65,7 +69,6 @@
 
   .top {
     width: 90%;
-    background-color: aqua;
   }
 
   .bottom {

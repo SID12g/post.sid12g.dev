@@ -72,6 +72,9 @@
   color: #868b94;
   margin: 0px;
   z-index: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .title {
@@ -79,6 +82,9 @@
   font-family: "Pretendard SemiBold";
   margin-top: 0px;
   z-index: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .image {
@@ -111,6 +117,27 @@
 }
 
 @media (max-width: 767px) {
+  .container {
+    height: 254px;
+  }
+
+  .image {
+    height: 254px;
+    overflow: hidden;
+  }
+
+  .textWrap {
+  }
+
+  .title {
+    font-size: 24px;
+    height: 24px;
+  }
+
+  .description {
+    font-size: 14px;
+    height: 14px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -124,5 +151,8 @@
 
   .image {
     width: 100%;
+  }
+
+  .textWrap {
   }
 }

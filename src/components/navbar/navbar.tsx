@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <div className={styles.container}>
       <Link className={styles.logo} href="/">
-        <p>SIIID</p>
+        <p style={{ margin: 0 }}>SIIID</p>
       </Link>
       <div className={styles.buttonWrap}>
         <Link className={styles.link} href="https://sid12g.dev">
@@ -18,8 +18,8 @@ export default function Navbar() {
             className={styles.tags}
             src={hash}
             alt="hash"
-            width={20}
-            height={20}
+            width={16}
+            height={16}
           />
         </Link>
       </div>

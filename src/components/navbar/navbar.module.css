@@ -2,15 +2,15 @@
   display: flex;
   box-shadow: 0 0 2px;
   background-color: white;
-  height: 70px;
+  height: 60px;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  font-size: 28px;
+  font-size: 24px;
   font-family: "Pretendard";
-  font-weight: 500;
+  font-weight: 600;
   color: black;
   text-decoration: none;
   margin-left: 36px;
@@ -27,14 +27,12 @@
 
 .link {
   align-items: center;
-  width: 56px;
-  height: 24px;
   text-decoration: none;
   margin: 0px 16px 0px 0px;
 }
 
 .about {
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Pretendard";
   color: black;
   font-weight: 500;
@@ -51,6 +49,8 @@
   height: 40px;
   margin-right: 26px;
   transition: all 0.3s;
+  display: flex;
+  justify-content: center;
 }
 
 .button:hover {
@@ -59,6 +59,5 @@
 
 .tags {
   text-decoration: none;
-  margin-right: 26px;
   padding: 10px;
 }

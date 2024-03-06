@@ -13,7 +13,7 @@ export default function Navbar() {
         <Link className={styles.link} href="https://sid12g.dev">
           <p className={styles.about}>About</p>
         </Link>
-        <Link className={styles.button} href="/tags/all">
+        <Link className={styles.button} href="/tags/all-posts">
           <Image
             className={styles.tags}
             src={hash}

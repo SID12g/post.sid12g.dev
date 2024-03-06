@@ -20,6 +20,15 @@
   justify-content: center;
 }
 
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover {
+  text-decoration-line: underline;
+}
+
 .tag {
   margin: 0;
   margin-left: 12px;

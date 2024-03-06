@@ -20,6 +20,11 @@
   }
 }
 
+.link {
+  text-decoration: none;
+  color: black;
+}
+
 .info {
   width: 720px;
   display: flex;
@@ -161,6 +166,6 @@
   }
 
   .textWrap {
-    width: 88%;
+    width: 85%;
   }
 }

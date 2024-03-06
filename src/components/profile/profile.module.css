@@ -40,7 +40,7 @@
   background-color: #414141;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   .container {
     display: none;
   }

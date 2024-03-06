@@ -5,6 +5,11 @@
   text-align: center;
 }
 
+.nowInfo {
+  display: flex;
+  justify-content: center;
+}
+
 .nowTag {
   font-size: 40px;
   font-family: "Pretendard";
@@ -12,6 +17,11 @@
   margin: 0;
   margin-top: 64px;
   margin-bottom: 32px;
+}
+
+.nowCount {
+  margin-top: 60px;
+  font-family: "Pretendard SemiBold";
 }
 
 .tagsWrap {

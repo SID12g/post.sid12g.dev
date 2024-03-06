@@ -21,13 +21,20 @@ export default function Tags({ params }: { params: { slug: string } }) {
       return tags.find((tag) => tag.link == params.slug)?.tag;
     }
   }
+
+  function getCount() {
+    return tags.find((tag) => tag.link == params.slug)?.count;
+  }
   getLink();
   return (
     <main className={styles.main}>
       <div>
-        <h2 className={styles.nowTag}>
-          {params.slug === "all" ? "ALL POSTS." : getLink() + "."}
-        </h2>
+        <div className={styles.nowInfo}>
+          <h2 className={styles.nowTag}>
+            {params.slug === "all" ? "ALL POSTS." : getLink() + "."}{" "}
+          </h2>
+          <p className={styles.nowCount}>({getCount()})</p>
+        </div>
         <div className={styles.tagsWrap}>
           {tags.map((tag, index) => (
             <Link

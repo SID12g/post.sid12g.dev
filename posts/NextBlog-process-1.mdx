@@ -1,0 +1,342 @@
+---
+title: Next.js로 mdx 블로그 만들기 1편 (포스팅 구현하기)
+date: 2023-12-11
+description: 나는 왜 블로그를 만들게 되었을까?
+image: /posts/NextBlog-process-1/Thumbnail.png
+tag: Next
+---
+
+안녕하세요! 저의 첫 포스트에 방문해 주셔서 감사합니다 😘
+
+첫 포스트에서는 어떠한 과정을 거쳐서 제가 블로그를 제작하게 되었는지 써보려고 합니다!
+
+### 1. 왜 만들게 되었을까? 🤔
+
+원래도 개발하면서 내가 배운 내용들을 정리하고 다시 볼 수 있으면 좋겠다는 생각은 항상 했었으나 어떤 블로그를 사용할지 고민 중이었습니다. 그러던 중에 많은 개발자 분들 께서 만드신 블로그를 보게 되었습니다.
+
+- [정현수 기술 블로그](https://junghyeonsu.com/)
+- [Pozafly's Blog](https://pozafly.github.io/)
+- [yiyb-blog](https://yiyb-blog.vercel.app/posts/nextjs-contentlayer-blog)
+
+대표적으로 이렇게 3개의 블로그를 보았습니다. 물론 티스토리나 개발 블로그인 벨로그도 깔끔하고 운영하기 편할 것 같다고 생각하였습니다. 하지만 위의 블로그들 처럼 오직 나를 위한 나를 뜻하는 블로그가 있으면 좋겠다고 생각하여 블로그를 제작하게 되었습니다. 또한 블로그를 만들어 보는 것도 개발자로서 역량을 강화할 수 있는 계기가 될 수 있겠다고 생각했습니다.
+
+### 2. 블로그를 만들기 위해서는? 😵‍💫
+
+블로그를 만들기 위해서 가장 중요하게 생각했던 것은 에디터였습니다. 사실 지금 만든 블로그와 위의 있는 대부분의 블로그의 경우 마크다운(mdx)파일에서 글을 읽어 페이지에 띄워주는 형태이지만, 무작정 "블로그를 만들자!" 라고 생각하였을 때에는 네이버 블로그, 벨로그 처럼 제가 글을 쓸 수 있는 에디터가 가장 중요한 요소라고 생각했습니다.
+
+그래서 네이버에서 제작한 에디터, CKEditor, toast ui editor, Summernote 등 많은 에디터를 도입하고자 하였으나 현재 프레임워크에서 사용하기 힘들어 도입을 포기하였습니다.
+
+저는 Next.js를 사용하여 블로그를 만들고 있었으며, 해당 시기에는 Next.js 14 버전이 출시하여 해당 버전을 사용하고 있었습니다. 하지만 위의 에디터들 모두 React 18 버전을 지원하지 않는 등, 제가 사용하는 환경에서는 활용하기 어려웠습니다. (지금은 Next.js 13.5 버전을 사용하였습니다.)
+
+그래서 저는 다시 제가 보았던 블로그들의 방식과 소스 코드를 확인해 보았습니다. 그리고 저는 많은 블로그들이 마크다운을 활용하여 글을 보여준다는 것을 알게 되었고, 다른 개발 블로그들도 많이 이러한 방식을 채택했다는 것을 알게되었습니다.
+
+### 3. 마크다운이 뭔데? 🤨
+
+저는 사실 마크다운이 뭔지 몰랐습니다. 그래서 우선 마크다운이 무엇인지 알아보았습니다.
+
+![노션 마크다운](/posts/NextBlog-process-1/CodeFiles.png)
+
+<figcaption>
+  [paul lab님의 메모혁신 노션(Notion) 가이드
+  중](https://paullabkorea.medium.com/%EB%A9%94%EB%AA%A8%ED%98%81%EC%8B%A0-%EB%85%B8%EC%85%98-notion-%EA%B0%80%EC%9D%B4%EB%93%9C-%EC%B2%B4%ED%97%98%ED%8C%90-10%ED%8E%B8-197ea8dd64ed){" "}
+</figcaption>
+
+위의 사진은 노션입니다. 여러분 모두 노션을 사용해보신 적이 있을 것 입니다. 위와 같이 노션에서도 마크다운 방식으로 글을 작성하실 수 있습니다. 위와 같은 문법으로 글을 작성하는 것을 마크다운 이라고 합니다. 정확히 말하면 마크업 언어의 일종입니다. 깃허브의 README.md 또한 마크다운으로 작성되었습니다!
+
+![코드 마크다운](/posts/NextBlog-process-1/CodeMd.png)
+
+<figcaption>
+  [Code에서 실행한 마크다운
+  파일](/posts/NextBlog-process-1/NextBlog-process-1/CodeMd.png){" "}
+</figcaption>
+
+이러한 문법으로 작성한 글이 마크다운입니다. 왼쪽과 오른쪽을 비교해보면 더 쉽게 이해하실 수 있을 겁니다.
+
+마크다운 문법 : [Gist Github](https://gist.github.com/ihoneymon/652be052a0727ad59601)
+
+### 4. 그래서 어떻게 해야 마크다운을 페이지에서 보여줄 수 있을까? 📝
+
+제가 둘러보았던 블로그들의 개발자분들께서는 블로그 제작 과정을 남겨 주셨기 때문에, 좀 더 수월하게 제작할 수 있었습니다. 블로그 제작 과정을 남겨주셨던 많은 개발자분들 께 감사드립니다.
+
+> 우선 앞서 말했듯이 저는 Next.js로 블로그를 제작하고 있었기 때문에, Gatsby는 고려하지 않았습니다.
+
+저는 앞서 언급했던 정현수님 혹은 yiyb님의 방식으로 제작하려고 하였으나 Next.js 버전이 12 기준으로 제작 되어서인지 다른 문제인지는 잘 모르겠지만 문제가 발생하여 Next.js 13, 기준으로 블로그를 제작하신 [gaudion](https://gaudion.dev/blog/nextjs-mdx-blog#2-create-our-first-blog)님의 글을 참고하여 제작하였습니다. gaudion님 께서는 gray-matter를 사용하여 블로그를 제작하셨고, 저 또한 gray-matter를 사용하였습니다.
+
+### 5. 블로그 토대 만들기! 😎
+
+그럼 이제 제가 어떤 과정으로 블로그를 제작하였는지 알려드리겠습니다!
+
+우선 저는 아래와 같이 프로젝트를 빌드 하였습니다.
+
+- Use Typescript - Yes
+- Use ESLint - No
+- Use Tailwind CSS - No
+- Use src/ directory - Yes
+- Use App Router - Yes
+- Would you like to customize the default import alias - No
+
+그 후 필요한 패키지를 설치합니다!
+
+```shell
+npm install next-mdx-remote
+```
+
+MDX 파일을 블로그로 표시 합니다!
+
+```shell
+npm install gray-matter
+```
+
+블로그에 제목이나 설명과 같은 메타데이터를 추가 합니다! (핵심이에요!)
+
+##### 그리고 글들을 저장할 파일을 만들어 줍니다.
+
+![Code directory](/posts/NextBlog-process-1/CodeFiles.png)
+
+<figcaption>
+  [Code의 디렉토리](/posts/NextBlog-process-1/CodeFiles.png){" "}
+</figcaption>
+
+저는 blogs 폴더를 생성하여 mdx 파일들을 보관하였습니다. mdx 파일의 경우 아래와 같은 형태를 가집니다.
+
+```markdownFile
+// blogs/example.mdx
+---
+title: 나의 첫 블로그 글
+date: 2023년 12월 11일 (월요일)
+description: 첫 블로그 글에 온걸 환영합니다.
+image : /blogs/test.png # 대표 이미지
+tag : Next.js
+---
+
+# 이곳에 h1에 들어갈 내용을 적어요!
+
+제가 첫 블로그 글을 쓸 수 있는 것에 대해 감사하게 생각합니다.
+
+![image](/blogs/test.png)
+```
+
+제목, 날짜 및 설명이 포함된 이 파일의 상단 섹션은 Frontmatter 라고 합니다. 이를 통해 블로그 게시물에 대한 메타데이터를 포함할 수 있습니다.
+
+저는 제목, 날짜, 설명, 대표 이미지, 태그를 포함하였습니다. 이 부분은 개발자 재량으로 변경하셔도 상관 없습니다.
+
+> 마크다운에서 사용하는 이미지의 경우 public 폴더 내에 따로 blogs라는 파일을 만들어 보관하였습니다.
+
+### 6. mdx 파일 가져와 읽기! 📖
+
+```tsx
+// app/posts/[slug]/page.tsx
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import styles from "../../../styles/PostsSlug.module.css";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import Image from "next/image";
+import "@/styles/highlight-js/github-dark.css";
+import rehypeHighlight from "rehype-highlight";
+import CopyButton from "@/components/postSlug/CopyButton";
+import ProgressBar from "@/components/postSlug/ProgressBar";
+import Comments from "@/components/postSlug/Comments";
+import Link from "next/link";
+
+const options: any = {
+  mdxOptions: {
+    remarkPlugins: [],
+    rehypePlugins: [rehypeHighlight],
+  },
+};
+
+export async function generateStaticParams() {
+  const files = fs.readdirSync(path.join("blogs"));
+
+  const paths = files.map((filename) => ({
+    slug: filename.replace(".mdx", ""),
+  }));
+  return paths;
+}
+
+function getPost({ slug }: { slug: string }) {
+  const markdownFile = fs.readFileSync(
+    path.join("blogs", slug + ".mdx"),
+    "utf-8"
+  );
+
+  const { data: frontMatter, content } = matter(markdownFile);
+
+  return {
+    frontMatter,
+    slug,
+    content,
+  };
+}
+
+export default function Post({ params }: any) {
+  const props = getPost(params);
+
+  return (
+    <div>
+      <ProgressBar />
+      <div>
+        <title>{props.frontMatter.title}</title>
+        <article className={styles.wrap}>
+          <Link
+            className={styles.tag_wrap}
+            href={"/?tag=" + props.frontMatter.tag}
+          >
+            <p className={styles.tag}>{props.frontMatter.tag}</p>
+          </Link>
+          <p className={styles.date}>{props.frontMatter.date}</p>
+          <h1 className={styles.title}>{props.frontMatter.title}</h1>
+          <p className={styles.description}>{props.frontMatter.description}</p>
+          <div className={styles.img_wrap}>
+            <Image
+              src={props.frontMatter.image}
+              className={styles.image}
+              alt="preview"
+              width={1920}
+              height={1080}
+            />
+          </div>
+          <div className={styles.content}>
+            <MDXRemote source={props.content} options={options} />
+          </div>
+        </article>
+        <CopyButton />
+        <Comments />
+      </div>
+    </div>
+  );
+}
+```
+
+저는 app폴더 내에 posts/[slug] 폴더를 만들고 해당 위치에 mdx 파일을 읽을 코드를 작성하였습니다.
+
+```tsx
+// app/posts/[slug]/page.tsx
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+```
+
+"import" 내용 설명
+
+1. fs 파일 시스템에서 블로그를 읽기
+2. path 우리 블로그의 로컬 경로를 찾기
+3. matter 블로그에서 메타데이터를 추출
+
+```tsx
+// app/posts/[slug]/page.tsx
+export async function generateStaticParams() {
+  const files = fs.readdirSync(path.join("blogs"));
+
+  const paths = files.map((filename) => ({
+    slug: filename.replace(".mdx", ""),
+  }));
+  return paths;
+}
+```
+
+위 함수는 "blogs" 디렉터리의 모든 파일을 가져오고 각 파일에 대한 slug 배열을 반환합니다. 여기서 반환한 slug들은 후에 해당 마크다운 파일에 해당하는 글을 가져오는 데에 사용됩니다.
+
+```tsx
+// app/posts/[slug]/page.tsx
+function getPost({ slug }: { slug: string }) {
+  const markdownFile = fs.readFileSync(
+    path.join("blogs", slug + ".mdx"),
+    "utf-8"
+  );
+
+  const { data: frontMatter, content } = matter(markdownFile);
+
+  return {
+    frontMatter,
+    slug,
+    content,
+  };
+}
+```
+
+위의 코드는 slug에 대한 frontMatter, content를 가져오는 함수입니다. 그리고 frontMatter, content를 Post에서 props에 대입하고, 아래와 같이 나타내 줍니다. params에는 해당 slug가 들어가게 됩니다.
+
+```tsx
+// app/posts/[slug]/page.tsx
+export default function Post({ params }: any) {
+  const props = getPost(params);
+
+  return (
+    <div>
+      <ProgressBar />
+      <div>
+        <title>{props.frontMatter.title}</title>
+        <article className={styles.wrap}>
+          <p className={styles.tag}>{props.frontMatter.tag}</p>
+          <p className={styles.date}>{props.frontMatter.date}</p>
+          <h1 className={styles.title}>{props.frontMatter.title}</h1>
+          <p className={styles.description}>{props.frontMatter.description}</p>
+          <div className={styles.img_wrap}>
+            <Image
+              src={props.frontMatter.image}
+              className={styles.image}
+              alt="preview"
+              width={1920}
+              height={1080}
+            />
+          </div>
+          <div className={styles.content}>
+            <MDXRemote source={props.content} options={options} />
+          </div>
+        </article>
+        <CopyButton />
+        <Comments />
+      </div>
+    </div>
+  );
+}
+```
+
+위에 태그, 날짜, 제목, 설명, 대표 이미지를 보여주고 MDXRemote를 통해 본문 내용을 보여줍니다. MDXRemote options에 options가 설정되어있는 것을 확인할 수 있는데, 이는 본문을 보여줄 때 별도로 설정한 내용을 적용시켜줍니다.
+
+```tsx
+// app/posts/[slug]/page.tsx
+const options: any = {
+  mdxOptions: {
+    remarkPlugins: [],
+    rehypePlugins: [rehypeHighlight],
+  },
+};
+```
+
+저는 rehypeHighlight를 통해 CodeBlock을 Github 스타일로 적용하였습니다. CodeBlock 스타일링 방법은 후에 다른 글에서 설명하도록 하겠습니다.
+
+MDXRemote 또한 저만의 스타일을 적용하기 위해 div로 감싸준 뒤 content 라는 클래스를 적용합니다.
+
+```css
+/* styles/PostSlug.module.css */
+.content p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 35px;
+}
+
+.content h1 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-size: 2.3rem;
+}
+```
+
+위와 같은 방식으로 태그들을 자신의 마음대로 스타일링 하면 됩니다. 그렇다면 지금 여러분이 보고있는 화면처럼
+
+예쁜 블로그를 완성하실 수 있을 겁니다!
+
+지금까지 저의 글을 읽어주셔서 감사합니다!
+
+```java
+// 이 코드는 예제 코드입니다.
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, world!");
+    }
+}
+```

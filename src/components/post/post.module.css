@@ -1,8 +1,6 @@
 .container {
   margin-top: 48px;
-  width: 480px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 48%;
 }
 
 .container:hover {
@@ -43,12 +41,6 @@
 }
 
 @media (max-width: 767px) {
-  .container {
-    width: 100%;
-  }
-}
-
-@media (max-width: 1200px) {
   .container {
     width: 100%;
   }

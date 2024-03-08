@@ -36,16 +36,6 @@
   margin: 0px;
 }
 
-.singlePost {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.doublePost {
-  display: flex;
-  justify-content: center;
-}
-
 @media (min-width: 768px) {
   .singlePost {
     display: none;

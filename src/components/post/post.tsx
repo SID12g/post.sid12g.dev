@@ -4,16 +4,24 @@ import Next from "@/../public/next.png";
 import Date from "../date/date";
 import Tag from "../tag/tag";
 import Link from "next/link";
+import { tags } from "@/app/data/tags";
 
 export default function Post({
   title,
   description,
   date,
+  tag,
 }: {
   title: string;
   description: string;
   date: string;
+  tag: string;
 }) {
+  function tagInfo() {
+    // console.log("tag", tag);
+    return tags.find((tags) => tags.tag == tag);
+  }
+  // console.log(tagInfo());
   return (
     <div className={styles.container}>
       <Link className={styles.link} href="/posts/a">
@@ -22,7 +30,12 @@ export default function Post({
         <p className={styles.description}>{description}</p>
         <div className={styles.info}>
           <Date date={date} />
-          <Tag border="black" background="black" color="white" tag="NEXT" />
+          <Tag
+            border={tagInfo()?.border || "black"}
+            background={tagInfo()?.background || "black"}
+            color={tagInfo()?.color || "white"}
+            tag={tag}
+          />
         </div>
       </Link>
     </div>

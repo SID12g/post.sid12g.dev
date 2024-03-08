@@ -51,28 +51,6 @@
   margin-right: auto;
 }
 
-.singlePost {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.doublePost {
-  display: flex;
-  justify-content: center;
-}
-
-@media (min-width: 768px) {
-  .singlePost {
-    display: none;
-  }
-}
-
-@media (max-width: 767px) {
-  .doublePost {
-    display: none;
-  }
-}
-
 @media (max-width: 1100px) {
   .main {
     width: 90%;

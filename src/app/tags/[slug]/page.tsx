@@ -5,7 +5,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 export default function Tags({ params }: { params: { slug: string } }) {
-  function getLink() {
+  function getTag() {
     if (tags.find((tags) => tags.link == params.slug)?.tag === undefined) {
       redirect("/not-found");
     } else {
@@ -16,14 +16,14 @@ export default function Tags({ params }: { params: { slug: string } }) {
   function getCount() {
     return tags.find((tags) => tags.link == params.slug)?.count;
   }
-  getLink();
+  getTag();
 
   return (
     <main className={styles.main}>
       <div>
         <div className={styles.nowInfo}>
           <h2 className={styles.nowTag}>
-            {params.slug === "all" ? "ALL POSTS." : getLink() + "."}{" "}
+            {params.slug === "all" ? "ALL POSTS." : getTag() + "."}{" "}
           </h2>
           <p className={styles.nowCount}>({getCount()})</p>
         </div>
@@ -33,7 +33,7 @@ export default function Tags({ params }: { params: { slug: string } }) {
               className={styles.link}
               href={"/tags/" + tag.link}
               key={index}
-              style={tag.tag == getLink() ? { color: "grey" } : {}}
+              style={tag.tag == getTag() ? { color: "grey" } : {}}
             >
               <p className={styles.tag}>
                 {tag.tag} ({tag.count})
@@ -42,7 +42,7 @@ export default function Tags({ params }: { params: { slug: string } }) {
           ))}
         </div>
         <div className={styles.bottom}>
-          <PostList tag={getLink() || "All Posts"} />
+          <PostList tag={getTag() || "All Posts"} />
         </div>
       </div>
     </main>

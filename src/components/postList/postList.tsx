@@ -10,8 +10,6 @@ export default function PostList({ tag }: { tag: string }) {
       return allPosts.filter((post) => post.tag == tag);
     }
   }
-  console.log("pl tag: ", tag);
-  console.log("pl posts: ", getPost());
   const posts = getPost();
   return (
     <div>

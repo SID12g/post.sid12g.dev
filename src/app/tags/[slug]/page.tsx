@@ -5,8 +5,6 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 export default function Tags({ params }: { params: { slug: string } }) {
-  console.log(params);
-
   function getLink() {
     if (tags.find((tags) => tags.link == params.slug)?.tag === undefined) {
       redirect("/not-found");
@@ -19,7 +17,6 @@ export default function Tags({ params }: { params: { slug: string } }) {
     return tags.find((tags) => tags.link == params.slug)?.count;
   }
   getLink();
-  console.log(getLink());
 
   return (
     <main className={styles.main}>
@@ -36,6 +33,7 @@ export default function Tags({ params }: { params: { slug: string } }) {
               className={styles.link}
               href={"/tags/" + tag.link}
               key={index}
+              style={tag.tag == getLink() ? { color: "grey" } : {}}
             >
               <p className={styles.tag}>
                 {tag.tag} ({tag.count})

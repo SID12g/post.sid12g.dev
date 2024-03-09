@@ -1,5 +1,53 @@
 .wrap {
-  margin-top: 53px;
+  margin-top: 100px;
+}
+
+.container {
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 16px;
+  justify-content: space-between;
+  background-image: linear-gradient(to right, #f87171, #d946ef, #6366f1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+}
+
+.text {
+  color: white;
+  font-family: "Pretendard SemiBold";
+  font-size: 18px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-family: "Pretendard SemiBold";
+  background-color: #fff;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  color: #dc2626;
+  transition: all 0.3s;
+}
+
+.link:hover {
+  filter: brightness(70%);
 }
 
 .info {
@@ -13,7 +61,7 @@
   padding: 16px;
 }
 
-.container {
+.container2 {
   background-color: #fbf198;
   border-radius: 10px;
   display: flex;
@@ -23,7 +71,7 @@
   padding-right: 15px;
 }
 
-.header {
+.header2 {
   margin-top: 30px;
   font-size: 1.5rem;
   font-family: "Pretendard";

@@ -2,29 +2,25 @@ import styles from "../../styles/SayHello.module.css";
 import information from "../../../public/home/information_icon.svg";
 import Image from "next/image";
 import Link from "next/link";
+import fire from "@/../public/fire.svg";
+
 export default function SayHello() {
   return (
     <div className={styles.wrap}>
-      <div className={styles.info}>
-        <p>블로그가 이전되었습니다!</p>
-        <Link
-          style={{
-            padding: 10,
-            borderRadius: 10,
-            textDecoration: "none",
-            color: "black",
-            backgroundColor: "white",
-          }}
-          href="https://post.sid12g.dev"
-        >
-          이동하기
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <Image className={styles.icon} src={fire} alt="fire icon" />
+          <p className={styles.text}>블로그가 이전되었습니다!</p>
+        </div>
+        <Link className={styles.link} href="https://post.sid12g.dev">
+          자세히보기 →
         </Link>
       </div>
-      <p className={styles.header}>
+      <p className={styles.header2}>
         저의 블로그에 오신걸 환영합니다
         <Link href="/sitemap.xml">👋</Link>
       </p>
-      <div className={styles.container}>
+      <div className={styles.container2}>
         <Image
           src={information}
           className={styles.icon}

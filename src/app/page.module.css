@@ -11,10 +11,14 @@
   margin-bottom: 60px;
 }
 
+.alarm {
+  margin-top: 48px;
+}
+
 .newText {
   font-size: 28px;
   font-family: "Pretendard SemiBold";
-  margin: 48px 0px 0px 0px;
+  margin-top: 48px;
 }
 
 .topContent {

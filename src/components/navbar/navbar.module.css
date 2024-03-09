@@ -2,8 +2,8 @@
   display: flex;
   box-shadow: 0 0 1px;
   background-color: transparent;
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
   height: 60px;
   justify-content: space-between;
   align-items: center;

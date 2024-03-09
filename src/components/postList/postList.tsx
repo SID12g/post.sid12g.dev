@@ -1,26 +1,29 @@
 import styles from "@/components/postList/postList.module.css";
 import Post from "../post/post";
-import { allPosts } from "@/app/data/posts";
+import posts from "@/utils/getPosts";
 
 export default function PostList({ tag }: { tag: string }) {
   function getPost() {
     if (tag == "All Posts") {
-      return allPosts;
+      return posts;
     } else {
-      return allPosts.filter((post) => post.tag == tag);
+      return posts.filter((post) => post.meta.tag == tag);
     }
   }
-  const posts = getPost();
+  const filteredPosts = getPost();
+
   return (
     <div>
       <div className={styles.container}>
         <div className={styles.postWrap}>
-          {posts.map((post, index) => (
+          {filteredPosts.map((post, index) => (
             <Post
-              title={post.title}
-              description={post.description}
-              date={post.date}
-              tag={post.tag}
+              title={post.meta.title}
+              description={post.meta.description}
+              date={post.meta.date}
+              image={post.meta.image}
+              tag={post.meta.tag}
+              slug={post.slug}
               key={index}
             />
           ))}

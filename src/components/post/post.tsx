@@ -1,6 +1,5 @@
 import styles from "@/components/post/post.module.css";
 import Image from "next/image";
-import Next from "@/../public/next.png";
 import Date from "../date/date";
 import Tag from "../tag/tag";
 import Link from "next/link";
@@ -10,12 +9,16 @@ export default function Post({
   title,
   description,
   date,
+  image,
   tag,
+  slug,
 }: {
   title: string;
   description: string;
   date: string;
+  image: string;
   tag: string;
+  slug: string;
 }) {
   function tagInfo() {
     // console.log("tag", tag);
@@ -24,8 +27,14 @@ export default function Post({
   // console.log(tagInfo());
   return (
     <div className={styles.container}>
-      <Link className={styles.link} href="/posts/a">
-        <Image className={styles.image} src={Next} alt="Thumbnail" />
+      <Link className={styles.link} href={"/posts/" + slug}>
+        <Image
+          className={styles.image}
+          src={image}
+          alt="Thumbnail"
+          width={1920}
+          height={1080}
+        />
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.description}>{description}</p>
         <div className={styles.info}>

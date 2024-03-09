@@ -16,28 +16,12 @@ const tags = [
     color: "white",
   },
   {
-    tag: "React",
-    count: 3,
-    link: "react",
-    border: "black",
-    background: "black",
-    color: "white",
-  },
-  {
-    tag: "Firebase",
-    count: 3,
-    link: "firebase",
-    border: "black",
-    background: "black",
-    color: "white",
-  },
-  {
     tag: "React Native",
     count: 3,
     link: "react-native",
     border: "black",
-    background: "black",
-    color: "white",
+    background: "orange",
+    color: "red",
   },
 ];
 

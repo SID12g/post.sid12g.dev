@@ -14,7 +14,7 @@ import rehypeSlug from "rehype-slug";
 import remarkToc from "remark-toc";
 import { tags } from "@/utils/getTags";
 import { tagStyles } from "@/app/styles/tagStlye";
-import { Metadata } from "next";
+import Comments from "@/components/comments/comments";
 
 const options: any = {
   mdxOptions: {
@@ -108,6 +108,7 @@ export default function Post({ params }: any) {
       <div className={styles.content}>
         <MDXRemote source={props.content} options={options} />
       </div>
+      <Comments />
     </article>
   );
 }

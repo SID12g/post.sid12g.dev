@@ -2,9 +2,6 @@ import Profile from "@/components/profile/profile";
 import styles from "./page.module.css";
 import NewPost from "@/components/newPost/newPost";
 import PostList from "@/components/postList/postList";
-import getPosts from "@/utils/getPosts";
-import filteredBlogs from "@/utils/getPosts";
-import filteredPosts from "@/utils/getPosts";
 import posts from "@/utils/getPosts";
 
 export default function Home() {

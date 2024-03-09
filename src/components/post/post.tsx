@@ -21,10 +21,8 @@ export default function Post({
   slug: string;
 }) {
   function tagInfo() {
-    // console.log("tag", tag);
     return tags.find((tags) => tags.tag == tag);
   }
-  // console.log(tagInfo());
   return (
     <div className={styles.container}>
       <Link className={styles.link} href={"/posts/" + slug}>

@@ -3,10 +3,19 @@ import Image from "next/image";
 import arrow from "@/../public/icons/arrow.svg";
 import Link from "next/link";
 import posts from "@/utils/getPosts";
+import none from "@/../public/images/404.png";
 
 export default function NewPost() {
-  const newPost = posts[0];
-  console.log(newPost);
+  const newPost = posts[0] || {
+    meta: {
+      title: "아직 포스트가 없습니다.",
+      date: "0000-00-00",
+      description: "아직 포스트가 없습니다.",
+      image: none,
+      tag: "NONE",
+    },
+    slug: "/not-found",
+  };
   return (
     <div className={styles.container}>
       <Link className={styles.link} href={"/posts/" + newPost.slug}>

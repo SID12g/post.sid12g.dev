@@ -1,5 +1,5 @@
 .container {
-  width: 1100px;
+  width: 800px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
@@ -33,9 +33,6 @@
   border-radius: 30px;
   margin-top: 48px;
   margin-bottom: 28px;
-}
-
-.content {
 }
 
 .content blockquote {
@@ -205,7 +202,7 @@
   text-decoration: none;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
   .container {
     width: 90%;
   }

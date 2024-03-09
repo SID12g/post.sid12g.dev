@@ -14,6 +14,7 @@ import rehypeSlug from "rehype-slug";
 import remarkToc from "remark-toc";
 import { tags } from "@/utils/getTags";
 import { tagStyles } from "@/app/styles/tagStlye";
+import { Metadata } from "next";
 
 const options: any = {
   mdxOptions: {
@@ -60,6 +61,9 @@ export async function generateMetadata({ params }: any) {
   return {
     title: post.frontMatter.title,
     description: post.frontMatter.description,
+    opengraph: {
+      images: [`https://post.sid12g.dev/posts/${post.slug}/Thumbnail.png`],
+    },
   };
 }
 

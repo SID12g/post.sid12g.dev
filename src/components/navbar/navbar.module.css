@@ -2,8 +2,8 @@
   display: flex;
   box-shadow: 0 0 1px;
   background-color: transparent;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
   height: 60px;
   justify-content: space-between;
   align-items: center;
@@ -17,13 +17,13 @@
 .logo {
   display: flex;
   text-decoration: none;
-  color: black;
   align-items: center;
   margin-left: 46px;
 }
 
 .logo:hover {
   text-decoration-line: underline;
+  color: var(--accent-color);
 }
 
 .logoImage {
@@ -36,7 +36,7 @@
   font-size: 20px;
   font-family: "Pretendard";
   font-weight: 600;
-  color: black;
+  color: var(--accent-color);
   text-decoration: none;
 }
 
@@ -54,7 +54,7 @@
 .about {
   font-size: 16px;
   font-family: "Pretendard";
-  color: black;
+  color: var(--accent-color);
   font-weight: 500;
   margin: 0;
 }
@@ -81,6 +81,7 @@
 .tags {
   text-decoration: none;
   padding: 10px;
+  filter: brightness(0%);
 }
 
 @media (max-width: 767px) {
@@ -90,5 +91,15 @@
 
   .button {
     margin-right: 26px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .button:hover {
+    background-color: #414141;
+  }
+
+  .tags {
+    filter: brightness(100%);
   }
 }

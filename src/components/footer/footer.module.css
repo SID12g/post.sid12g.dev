@@ -23,6 +23,7 @@
   padding: 4px;
   align-items: center;
   transition: all 0.3s;
+  filter: brightness(0%);
 }
 
 .icon {
@@ -48,5 +49,11 @@
 
   .iconWrap {
     justify-content: center;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .link {
+    filter: brightness(100%);
   }
 }

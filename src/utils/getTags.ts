@@ -27,7 +27,7 @@ function generateTagInfo(): TagInfo[] {
     link: convertToSlug("All Posts"),
   });
 
-  allTags.forEach((tag) => {
+  uniqueTags.forEach((tag) => {
     tagInfoList.push({
       tag: tag,
       count: getCount(tag),
@@ -40,25 +40,4 @@ function generateTagInfo(): TagInfo[] {
 
 const tags = generateTagInfo();
 
-const tagStyles = [
-  {
-    tag: "All Posts",
-    border: "black",
-    background: "black",
-    color: "white",
-  },
-  {
-    tag: "Next",
-    border: "aqua",
-    background: "blue",
-    color: "white",
-  },
-  {
-    tag: "React Native",
-    border: "black",
-    background: "orange",
-    color: "red",
-  },
-];
-
-export { tagStyles, tags };
+export { tags };

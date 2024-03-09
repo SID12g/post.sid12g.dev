@@ -1,8 +1,9 @@
 .date {
   font-size: 14px;
   font-family: "Pretendard Regular";
-  border: 1px black solid;
+  border: 1px var(--accent-color) solid;
   border-radius: 20px;
   padding: 8px 12px 8px 12px;
   text-align: center;
+  color: var(--accent-color);
 }

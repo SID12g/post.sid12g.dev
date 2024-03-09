@@ -4,4 +4,22 @@
 body {
   margin: 0;
   padding-top: 60px;
+  background-color: var(--background-color);
+  color: var(--accent-color);
+}
+
+:root {
+  --background-color: #fff;
+  --theme-color: #fff;
+  --accent-color: #000;
+  --profile-color: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #141414;
+    --theme-color: #000;
+    --accent-color: #fff;
+    --profile-color: #e6e6e6;
+  }
 }

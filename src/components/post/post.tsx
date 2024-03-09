@@ -3,7 +3,7 @@ import Image from "next/image";
 import Date from "../date/date";
 import Tag from "../tag/tag";
 import Link from "next/link";
-import { tagStyles } from "@/utils/getTags";
+import { tagStyles } from "@/app/styles/tagStlye";
 
 export default function Post({
   title,
@@ -38,8 +38,8 @@ export default function Post({
         <div className={styles.info}>
           <Date date={date} />
           <Tag
-            border={tagStyle()?.border || "black"}
-            background={tagStyle()?.background || "white"}
+            border={tagStyle()?.border || "#868B94"}
+            background={tagStyle()?.background || "#868B94"}
             color={tagStyle()?.color || "black"}
             tag={tag}
           />

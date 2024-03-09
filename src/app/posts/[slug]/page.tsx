@@ -10,11 +10,25 @@ import Date from "@/components/date/date";
 import Tag from "@/components/tag/tag";
 import { tags } from "@/app/data/tags";
 import Link from "next/link";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeSlug from "rehype-slug";
 
 const options: any = {
   mdxOptions: {
     remarkPlugins: [],
-    rehypePlugins: [rehypeHighlight],
+    rehypePlugins: [
+      rehypeSlug,
+      rehypeHighlight,
+      [
+        rehypeAutolinkHeadings,
+        {
+          behavior: "wrap",
+          properties: {
+            className: [styles.anchor],
+          },
+        },
+      ],
+    ],
   },
 };
 

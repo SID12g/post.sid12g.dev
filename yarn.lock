@@ -195,6 +195,11 @@
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.10.tgz#04ffa7f406ab628f7f7e97ca23e290cd8ab15efc"
   integrity sha512-IfYcSBWE3hLpBg8+X2SEa8LVkJdJEkT2Ese2aaLs3ptGdVtABxndrMaxuFlQ1qdFf9Q5rDvDpxI3WwgvKFAsQA==
 
+"@ungap/structured-clone@^1.0.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.2.0.tgz#756641adb587851b5ccb3e095daf27ae581c8406"
+  integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
+
 acorn-jsx@^5.0.0:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.3.2.tgz#7ed5bb55908b3b2f1bc55c6af1653bada7f07937"
@@ -372,6 +377,11 @@ extend@^3.0.0:
   resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.2.tgz#f8b1136b4071fbd8eb140aff858b1019ec2915fa"
   integrity sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==
 
+github-slugger@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/github-slugger/-/github-slugger-2.0.0.tgz#52cf2f9279a21eb6c59dd385b410f0c0adda8f1a"
+  integrity sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==
+
 glob-to-regexp@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/glob-to-regexp/-/glob-to-regexp-0.4.1.tgz#c75297087c851b9a578bd217dd59a92f59fe546e"
@@ -391,6 +401,13 @@ gray-matter@^4.0.3:
     kind-of "^6.0.2"
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
+
+hast-util-heading-rank@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/hast-util-heading-rank/-/hast-util-heading-rank-3.0.0.tgz#2d5c6f2807a7af5c45f74e623498dd6054d2aba8"
+  integrity sha512-EJKb8oMUXVHcWZTDepnr+WNbfnXKFNf9duMesmr4S8SXTJBJ9M4Yok08pu9vxdJwdlGRhVumk9mEhkEvKGifwA==
+  dependencies:
+    "@types/hast" "^3.0.0"
 
 hast-util-is-element@^3.0.0:
   version "3.0.0"
@@ -419,6 +436,13 @@ hast-util-to-estree@^2.0.0:
     style-to-object "^0.4.1"
     unist-util-position "^4.0.0"
     zwitch "^2.0.0"
+
+hast-util-to-string@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/hast-util-to-string/-/hast-util-to-string-3.0.0.tgz#2a131948b4b1b26461a2c8ac876e2c88d02946bd"
+  integrity sha512-OGkAxX1Ua3cbcW6EJ5pT/tslVb90uViVkcJ4ZZIMW/R33DX/AkcJcRrPebPwJkHYwlDHXz4aIwvAAaAdtrACFA==
+  dependencies:
+    "@types/hast" "^3.0.0"
 
 hast-util-to-text@^4.0.0:
   version "4.0.0"
@@ -1060,6 +1084,18 @@ react@^18:
   dependencies:
     loose-envify "^1.1.0"
 
+rehype-autolink-headings@^7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/rehype-autolink-headings/-/rehype-autolink-headings-7.1.0.tgz#531087e155d9df053944923efd47d99728f3b196"
+  integrity sha512-rItO/pSdvnvsP4QRB1pmPiNHUskikqtPojZKJPPPAVx9Hj8i8TwMBhofrrAYRhYOOBZH9tgmG5lPqDLuIWPWmw==
+  dependencies:
+    "@types/hast" "^3.0.0"
+    "@ungap/structured-clone" "^1.0.0"
+    hast-util-heading-rank "^3.0.0"
+    hast-util-is-element "^3.0.0"
+    unified "^11.0.0"
+    unist-util-visit "^5.0.0"
+
 rehype-highlight@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/rehype-highlight/-/rehype-highlight-7.0.0.tgz#f2fd0eaebea7d4d4ce2fca2e8d9e3aea9441aefc"
@@ -1070,6 +1106,17 @@ rehype-highlight@^7.0.0:
     lowlight "^3.0.0"
     unist-util-visit "^5.0.0"
     vfile "^6.0.0"
+
+rehype-slug@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/rehype-slug/-/rehype-slug-6.0.0.tgz#1d21cf7fc8a83ef874d873c15e6adaee6344eaf1"
+  integrity sha512-lWyvf/jwu+oS5+hL5eClVd3hNdmwM1kAC0BUvEGD19pajQMIzcNUd/k9GsfQ+FfECvX+JE+e9/btsKH0EjJT6A==
+  dependencies:
+    "@types/hast" "^3.0.0"
+    github-slugger "^2.0.0"
+    hast-util-heading-rank "^3.0.0"
+    hast-util-to-string "^3.0.0"
+    unist-util-visit "^5.0.0"
 
 remark-mdx@^2.0.0:
   version "2.3.0"
@@ -1209,6 +1256,19 @@ unified@^10.0.0:
     is-plain-obj "^4.0.0"
     trough "^2.0.0"
     vfile "^5.0.0"
+
+unified@^11.0.0:
+  version "11.0.4"
+  resolved "https://registry.yarnpkg.com/unified/-/unified-11.0.4.tgz#f4be0ac0fe4c88cb873687c07c64c49ed5969015"
+  integrity sha512-apMPnyLjAX+ty4OrNap7yumyVAMlKx5IWU2wlzzUdYJO9A8f1p9m/gywF/GM2ZDFcjQPrx59Mc90KwmxsoklxQ==
+  dependencies:
+    "@types/unist" "^3.0.0"
+    bail "^2.0.0"
+    devlop "^1.0.0"
+    extend "^3.0.0"
+    is-plain-obj "^4.0.0"
+    trough "^2.0.0"
+    vfile "^6.0.0"
 
 unist-util-find-after@^5.0.0:
   version "5.0.0"

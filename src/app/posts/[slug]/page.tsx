@@ -15,6 +15,7 @@ import remarkToc from "remark-toc";
 import { tags } from "@/utils/getTags";
 import { tagStyles } from "@/app/styles/tagStlye";
 import Comments from "@/components/comments/comments";
+import CopyButton from "@/components/copyButton/copyButton";
 
 const options: any = {
   mdxOptions: {
@@ -108,6 +109,7 @@ export default function Post({ params }: any) {
       <div className={styles.content}>
         <MDXRemote source={props.content} options={options} />
       </div>
+      <CopyButton />
       <Comments />
     </article>
   );

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Date from "../date/date";
 import Tag from "../tag/tag";
 import Link from "next/link";
-import { tags } from "@/app/data/tags";
+import { tagStyles } from "@/utils/getTags";
 
 export default function Post({
   title,
@@ -20,8 +20,8 @@ export default function Post({
   tag: string;
   slug: string;
 }) {
-  function tagInfo() {
-    return tags.find((tags) => tags.tag == tag);
+  function tagStyle() {
+    return tagStyles.find((style) => style.tag == tag);
   }
   return (
     <div className={styles.container}>
@@ -38,9 +38,9 @@ export default function Post({
         <div className={styles.info}>
           <Date date={date} />
           <Tag
-            border={tagInfo()?.border || "black"}
-            background={tagInfo()?.background || "black"}
-            color={tagInfo()?.color || "white"}
+            border={tagStyle()?.border || "black"}
+            background={tagStyle()?.background || "white"}
+            color={tagStyle()?.color || "black"}
             tag={tag}
           />
         </div>

@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+
 const postDir = "posts";
 const files = fs.readdirSync(path.join(process.cwd(), postDir));
 

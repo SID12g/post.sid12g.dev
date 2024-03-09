@@ -8,11 +8,11 @@ import "@/highlight-js/github-dark.css";
 import Image from "next/image";
 import Date from "@/components/date/date";
 import Tag from "@/components/tag/tag";
-import { tags } from "@/app/data/tags";
 import Link from "next/link";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 import remarkToc from "remark-toc";
+import { tagStyles, tags } from "@/utils/getTags";
 
 const options: any = {
   mdxOptions: {
@@ -66,7 +66,7 @@ export default function Post({ params }: any) {
   const props = getPost(params);
   function tagInfo() {
     // console.log("tag", tag);
-    return tags.find((tags) => tags.tag == props.frontMatter.tag);
+    return tagStyles.find((tags) => tags.tag == props.frontMatter.tag);
   }
   function getLink() {
     return tags.find((tags) => tags.tag == props.frontMatter.tag)?.link;

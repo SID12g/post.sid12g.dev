@@ -128,9 +128,13 @@
   align-items: center;
 }
 
-/* .content a:hover {
-  text-decoration: underline;
-} */
+.content li > a:hover {
+  text-decoration-line: underline;
+}
+
+.content p > a:hover {
+  text-decoration-line: underline;
+}
 
 .content h1 {
   margin-top: 50px;

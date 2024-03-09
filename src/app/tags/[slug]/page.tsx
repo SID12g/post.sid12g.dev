@@ -1,6 +1,6 @@
-import { tags } from "@/app/data/tags";
 import styles from "@/app/tags/[slug]/page.module.css";
 import PostList from "@/components/postList/postList";
+import { tags } from "@/utils/getTags";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 

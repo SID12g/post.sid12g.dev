@@ -2,10 +2,8 @@ import Profile from "@/components/profile/profile";
 import styles from "./page.module.css";
 import NewPost from "@/components/newPost/newPost";
 import PostList from "@/components/postList/postList";
-import posts from "@/utils/getPosts";
 
 export default function Home() {
-  console.log(posts);
   return (
     <main className={styles.main}>
       <div className={styles.top}>

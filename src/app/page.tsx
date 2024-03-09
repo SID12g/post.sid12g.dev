@@ -5,6 +5,7 @@ import PostList from "@/components/home/PostList";
 import filteredBlogs from "@/utils/getMdxPosts";
 import getTagsWithCounts from "@/utils/getMdxTags";
 import { cookies } from "next/headers";
+import Link from "next/link";
 
 export default function Home() {
   // 쿠키 초기화 및 'mode' 속성이 없는 경우 기본값 설정
@@ -30,6 +31,7 @@ export default function Home() {
       />
 
       <title>{`sid12g's blog`}</title>
+
       <SayHello />
       <Tags tags={tags} mode={cookie} />
       <PostList getBlogs={getBlogs} mode={cookie} />

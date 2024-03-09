@@ -11,7 +11,7 @@ export default function RootLayout({
   let cookie: any;
   cookie = cookies().get("mode");
   return (
-    <html lang="kr">
+    <html lang="ko">
       <body
         style={
           cookie && cookie.value === "dark"

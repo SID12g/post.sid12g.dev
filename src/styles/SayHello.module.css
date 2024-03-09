@@ -2,6 +2,17 @@
   margin-top: 53px;
 }
 
+.info {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fbf198;
+  height: 24px;
+  align-items: center;
+  border-radius: 10px;
+  padding: 16px;
+}
+
 .container {
   background-color: #fbf198;
   border-radius: 10px;
@@ -13,7 +24,7 @@
 }
 
 .header {
-  margin-top: 100px;
+  margin-top: 30px;
   font-size: 1.5rem;
   font-family: "Pretendard";
   font-weight: 600;

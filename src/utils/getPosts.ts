@@ -12,6 +12,7 @@ const allPosts = files
     return {
       meta: frontMatter,
       slug: filename.replace(".mdx", ""),
+      // contet: fileContent,
     };
   })
   .filter((post) => post.meta.tag);

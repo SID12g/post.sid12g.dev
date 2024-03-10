@@ -8,7 +8,6 @@
   padding-bottom: 4px;
   border-radius: 16px;
   justify-content: space-between;
-  width: 100%;
   background-image: linear-gradient(to right, #f87171, #d946ef, #6366f1);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -45,4 +44,20 @@
 
 .link:hover {
   filter: brightness(70%);
+}
+
+@media (max-width: 767px) {
+  .container {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .link {
+    text-align: center;
+  }
 }

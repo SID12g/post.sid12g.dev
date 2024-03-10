@@ -8,7 +8,7 @@ export default function Alarm() {
       <div className={styles.header}>
         <Image className={styles.icon} src={fire} alt="fire icon" />
         <p className={styles.text}>
-          안녕하세요~ 블로그를 리뉴얼 하였습니다. 많은 관심 부탁드립니다.
+          블로그를 리뉴얼 하였습니다. 많은 관심 부탁드립니다.
         </p>
       </div>
       <Link

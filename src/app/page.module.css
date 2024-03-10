@@ -13,6 +13,7 @@
 
 .alarm {
   margin-top: 48px;
+  width: 100%;
 }
 
 .newText {
@@ -38,17 +39,7 @@
   margin: 0px;
 }
 
-@media (min-width: 768px) {
-  .singlePost {
-    display: none;
-  }
-}
-
 @media (max-width: 767px) {
-  .doublePost {
-    display: none;
-  }
-
   .top {
     height: 320px;
   }

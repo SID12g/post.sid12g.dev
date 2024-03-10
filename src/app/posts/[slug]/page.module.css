@@ -40,9 +40,11 @@
   padding: 8px 32px;
   border-radius: 20px;
   background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
 }
 
-.content blockquote p::before {
+.content blockquote::before {
   content: url("/icons/docs.svg");
   width: 16px;
   height: 16px;
@@ -59,8 +61,6 @@
   line-height: 30px;
   font-family: "Pretendard";
   color: black;
-  display: flex;
-  align-items: center;
 }
 
 .content figcaption {
@@ -123,8 +123,6 @@
   text-decoration: none;
   white-space: normal;
   word-wrap: break-word;
-  display: flex;
-  align-items: center;
 }
 
 .content li > a:hover {

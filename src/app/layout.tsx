@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "sid12g's blog",
     description: "조성민의 블로그에 오신 것을 환영합니다.",
     url: "https://post.sid12g.dev",
-    images: [{ url: "https://post.sid12g.dev/blog_image.png" }],
+    images: [{ url: "https://post.sid12g.dev/images/blog_image.png" }],
     locale: "ko_KR",
     type: "website",
   },

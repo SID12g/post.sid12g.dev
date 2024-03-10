@@ -80,7 +80,7 @@
 .description {
   font-size: 16px;
   font-family: "Pretendard Regular";
-  color: #868b94;
+  color: #bebebe;
   margin: 0px;
   z-index: 5;
   overflow: hidden;
@@ -96,6 +96,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: white;
 }
 
 .image {

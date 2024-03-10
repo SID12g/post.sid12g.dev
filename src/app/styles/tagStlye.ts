@@ -29,6 +29,12 @@ const tagStyles = [
     background: "#FFCB2D",
     color: "white",
   },
+  {
+    tag: "Node",
+    border: "#2D7E3D",
+    background: "#2D7E3D",
+    color: "white",
+  },
 ];
 
 export { tagStyles };

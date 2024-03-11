@@ -7,6 +7,10 @@ import Alarm from "@/components/alarm/alarm";
 export default function Home() {
   return (
     <div>
+      <meta
+        name="naver-site-verification"
+        content="64a062d6249bccc8a191d99ee7deb1dcfd4904b0"
+      />
       <main className={styles.main}>
         <div className={styles.container}>
           <div className={styles.alarm}>

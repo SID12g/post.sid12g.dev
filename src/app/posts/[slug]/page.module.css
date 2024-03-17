@@ -126,6 +126,14 @@
   word-wrap: break-word;
 }
 
+.content p > a {
+  color: #4299e1;
+}
+
+.content li > a {
+  color: #4299e1;
+}
+
 .content li > a:hover {
   text-decoration-line: underline;
 }

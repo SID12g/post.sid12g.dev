@@ -2,17 +2,8 @@
 
 import styles from "@/components/comments/comments.module.css";
 import Giscus from "@giscus/react";
-import { useEffect, useState } from "react";
 
 export default function Comments() {
-  const [theme, setTheme] = useState("light");
-  useEffect(() => {
-    const prefersDark =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-    setTheme(prefersDark ? "noborder_gray" : "light");
-  }, []);
-
   return (
     <div className={styles.container}>
       <Giscus
@@ -25,7 +16,7 @@ export default function Comments() {
         reactionsEnabled="1"
         emitMetadata="0"
         inputPosition="top"
-        theme={theme}
+        theme="https://rawgit.com/krisamin/blog-comment/main/theme.css"
         lang="ko"
         loading="lazy"
       />

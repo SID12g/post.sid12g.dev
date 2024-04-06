@@ -6,6 +6,8 @@ export default function PostList({ tag }: { tag: string }) {
   function getPost() {
     if (tag == "All Posts") {
       return posts;
+    } else if (tag == "Main Posts") {
+      return posts.slice(0, 6);
     } else {
       return posts.filter((post) => post.meta.tag == tag);
     }

@@ -14,7 +14,7 @@ export default function Footer() {
         Copyright ⓒ {year} sid12g All rights reserved.
       </p>
       <div className={styles.iconWrap}>
-        <Link className={styles.link} href="mailto:sid12g@naver.com">
+        <Link className={styles.link} href="mailto:ad@sid12g.dev">
           <Image className={styles.icon} src={at} alt="at" />
         </Link>
         <Link className={styles.link} href="https://github.com/sid12g">

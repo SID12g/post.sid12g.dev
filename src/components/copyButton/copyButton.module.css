@@ -11,10 +11,6 @@
   margin-top: 100px;
 }
 
-.container:hover {
-  filter: brightness(70%);
-}
-
 .icon {
   width: 20px;
   height: 20px;

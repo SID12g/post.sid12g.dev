@@ -30,7 +30,7 @@ next-mdx-remote를 이용하여 mdx를 컴포넌트화 하고, gray-matter를 �
 
 그 후 test.mdx에 아래와 같은 내용을 넣어주겠습니다.
 
-```markdown
+````markdown
 // contents/test.mdx
 
 title: 테스트 1 제목
@@ -43,7 +43,6 @@ tag: 태그 1
 ## test
 
 test
-```
 
 ```tsx
 // src/app/page.tsx
@@ -51,6 +50,7 @@ export default function Home() {
   return <div>Home</div>;
 }
 ```
+````
 
 코드 같은 경우 (```)로 코드를 감싸고 첫줄에 언어를 작성해줘야 합니다.
 

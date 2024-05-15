@@ -19,8 +19,8 @@ const tagStyles = [
   },
   {
     tag: "React Native",
-    border: "#345FB3",
-    background: "#345FB3",
+    border: "#3670E1",
+    background: "#3670E1",
     color: "white",
   },
   {

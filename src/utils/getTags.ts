@@ -21,7 +21,7 @@ const uniqueArticleTags = allArticleTags.filter(
   (item, index) => allArticleTags.indexOf(item) === index
 );
 
-function convertToSlug(text: string): string {
+function convertToLink(text: string): string {
   return text.toLowerCase().replace(/\s+/g, "-");
 }
 
@@ -38,7 +38,7 @@ function generateTagInfo(tags: string[]): TagInfo[] {
     tagInfoList.push({
       tag: tag,
       count: getCount(tag),
-      link: convertToSlug(tag),
+      link: convertToLink(tag),
     });
   });
 

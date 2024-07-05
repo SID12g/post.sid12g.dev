@@ -17,7 +17,7 @@ export default function Navbar() {
         <Image className={styles.logo_image} src={logo} alt="logo" />
         <p className={styles.logo_text}>sead post</p>
       </Link>
-      <div className={styles.button_wrap}>
+      <div>
         <Button href="https://sid12g.dev" content="about" />
         <Button href="/tech" content="tech" />
         <Button href="/article" content="article" />

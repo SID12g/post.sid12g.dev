@@ -1,5 +1,14 @@
 import styles from "@/app/tech/page.module.css";
+import Background from "@/components/background/background";
+import Tags from "@/components/tags/tags";
+import { techTags } from "@/utils/getTags";
 
 export default function Tech() {
-  return <main className={styles.main}>tech</main>;
+  console.log(techTags);
+  return (
+    <main className={styles.main}>
+      <Background />
+      <Tags location="tech" nowTag="" />
+    </main>
+  );
 }

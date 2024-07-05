@@ -3,6 +3,8 @@
 
 * {
   font-family: "Wanted Sans Variable", "tossface";
+  color: var(--text-black-color);
+  text-decoration: none;
 }
 
 :root {

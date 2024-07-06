@@ -10,6 +10,7 @@ import rehypeSlug from "rehype-slug";
 import remarkToc from "remark-toc";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
+import Comments from "@/components/comments/comments";
 
 const options: any = {
   mdxOptions: {
@@ -94,6 +95,7 @@ export default function Post({ params }: { params: { slug: string } }) {
       <div className={styles.content}>
         <MDXRemote source={props.content} options={options} />
       </div>
+      <Comments />
     </article>
   );
 }

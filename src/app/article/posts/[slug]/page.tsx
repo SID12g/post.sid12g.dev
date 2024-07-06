@@ -10,6 +10,7 @@ import rehypeSlug from "rehype-slug";
 import remarkToc from "remark-toc";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
+import Comments from "@/components/comments/comments";
 
 const options: any = {
   mdxOptions: {
@@ -37,7 +38,7 @@ const options: any = {
 
 function getPost({ slug }: { slug: string }) {
   const markdownFile = fs.readFileSync(
-    path.join("contents/tech", slug + ".mdx"),
+    path.join("contents/article", slug + ".mdx"),
     "utf-8"
   );
   const { data: frontMatter, content } = matter(markdownFile);
@@ -57,10 +58,10 @@ export async function generateMetadata({ params }: any) {
     openGraph: {
       title: post.frontMatter.title,
       description: post.frontMatter.description,
-      url: `https://post.sid12g.dev/tech/posts/${post.slug}`,
+      url: `https://post.sid12g.dev/article/posts/${post.slug}`,
       images: [
         {
-          url: `https://post.sid12g.dev/tech/posts/${post.slug}/Thumbnail.png`,
+          url: `https://post.sid12g.dev/article/posts/${post.slug}/Thumbnail.png`,
         },
       ],
       locale: "ko_KR",
@@ -94,6 +95,7 @@ export default function Post({ params }: { params: { slug: string } }) {
       <div className={styles.content}>
         <MDXRemote source={props.content} options={options} />
       </div>
+      <Comments />
     </article>
   );
 }

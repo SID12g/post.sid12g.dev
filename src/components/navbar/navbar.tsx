@@ -6,12 +6,13 @@ import logo from "@/../public/logo.png";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import menu from "@/../public/menu.svg";
 
 export default function Navbar() {
   const pathname = usePathname().split("/")[1];
   const [scroll, setScroll] = useState(0);
   const [navStyle, setNavstyle] = useState(styles.navbar_dynamic);
-
+  const [checkedMenu, setCheckedMenu] = useState(false);
   const handleScroll = () => {
     if (window.innerWidth > 550) {
       if (scroll >= 120) {
@@ -34,14 +35,31 @@ export default function Navbar() {
 
   return (
     <nav className={navStyle}>
-      <Link
-        href={pathname === "article" ? "/article" : "/tech"}
-        className={styles.logo}
+      <div className={styles.logo_menu_wrap}>
+        <Link
+          href={pathname === "article" ? "/article" : "/tech"}
+          className={styles.logo}
+        >
+          <Image className={styles.logo_image} src={logo} alt="logo" />
+          <p className={styles.logo_text}>sead post</p>
+        </Link>
+        <Image
+          onClick={() => {
+            setCheckedMenu(!checkedMenu);
+          }}
+          src={menu}
+          alt="menu"
+          className={styles.menu}
+        />
+      </div>
+      <div
+        className={checkedMenu ? styles.button_menu : styles.button_menu_none}
       >
-        <Image className={styles.logo_image} src={logo} alt="logo" />
-        <p className={styles.logo_text}>sead post</p>
-      </Link>
-      <div>
+        <Button href="https://sid12g.dev" content="about" />
+        <Button href="/tech" content="tech" />
+        <Button href="/article" content="article" />
+      </div>
+      <div className={styles.button_wrap}>
         <Button href="https://sid12g.dev" content="about" />
         <Button href="/tech" content="tech" />
         <Button href="/article" content="article" />

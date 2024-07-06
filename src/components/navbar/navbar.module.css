@@ -36,6 +36,13 @@
   animation-duration: 0.3s;
 }
 
+.logo_menu_wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .logo {
   display: flex;
   flex-direction: row;
@@ -51,6 +58,18 @@
 .logo_text {
   font-size: 20px;
   font-weight: 400;
+}
+
+.menu {
+  display: none;
+}
+
+.button_menu {
+  display: none;
+}
+
+.button_menu_none {
+  display: none;
 }
 
 .button {
@@ -158,5 +177,56 @@
     z-index: 100;
     background-color: var(--background-color);
     animation: unset;
+    display: block;
+    justify-content: flex-end;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .button_menu_none {
+    display: none;
+  }
+
+  .button_menu {
+    width: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    right: 0px;
+    padding: 4px 0 16px;
+    border-top: 1px solid var(--border-grey-color);
+  }
+
+  .button_wrap {
+    display: none;
+  }
+
+  .button {
+    width: calc(100% - 80px);
+    text-align: center;
+    color: var(--text-grey-color);
+    font-size: 16px;
+    font-weight: 400;
+    margin: 12px 0 0 0;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s;
+  }
+
+  .button_selected {
+    width: calc(100% - 80px);
+    text-align: center;
+    color: var(--text-grey-color);
+    background-color: var(--background-grey-color);
+    font-size: 16px;
+    font-weight: 400;
+    margin: 12px 0 0 0;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s;
   }
 }

@@ -183,6 +183,7 @@
 
   .menu {
     display: block;
+    cursor: pointer;
   }
 
   .button_menu_none {

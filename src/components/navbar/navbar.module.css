@@ -1,10 +1,15 @@
 .navbar {
+  width: calc(100% - 80px);
   height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
   border-bottom: 1px solid var(--border-grey-color);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: var(--background-color);
 }
 
 .logo {

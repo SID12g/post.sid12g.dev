@@ -14,7 +14,7 @@ export default function Navbar() {
 
   const handleScroll = () => {
     if (window.innerWidth > 550) {
-      if (scroll >= 100) {
+      if (scroll >= 120) {
         setScroll(window.scrollY);
         setNavstyle(styles.navbar_static);
       } else {
@@ -25,6 +25,7 @@ export default function Navbar() {
   };
 
   useEffect(() => {
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);

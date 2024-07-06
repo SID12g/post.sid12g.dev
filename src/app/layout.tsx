@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "sead post",
   description: "Welcome to sead post.",
   openGraph: {
-    images: "/og-image.png",
+    images: "/og-image.jpg",
   },
 };
 

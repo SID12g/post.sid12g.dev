@@ -21,3 +21,13 @@
 body {
   margin: 0;
 }
+
+#area {
+  height: 136px;
+}
+
+@media (max-width: 550px) {
+  #area {
+    height: 72px;
+  }
+}

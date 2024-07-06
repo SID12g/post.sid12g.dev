@@ -5,11 +5,31 @@ import Image from "next/image";
 import logo from "@/../public/logo.png";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const pathname = usePathname().split("/")[1];
+  const [scroll, setScroll] = useState(0);
+  const [navStyle, setNavstyle] = useState(styles.navbar_dynamic);
+
+  const handleScroll = () => {
+    if (scroll >= 100) {
+      setScroll(window.scrollY);
+      setNavstyle(styles.navbar_static);
+    } else {
+      setScroll(window.scrollY);
+      setNavstyle(styles.navbar_dynamic);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
   return (
-    <nav className={styles.navbar}>
+    <nav className={navStyle}>
       <Link
         href={pathname === "article" ? "/article" : "/tech"}
         className={styles.logo}

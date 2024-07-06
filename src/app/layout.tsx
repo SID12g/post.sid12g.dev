@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="ko">
       <body>
         <Navbar />
-        <div style={{ height: 72 }} />
+        <div id="area" />
         {children}
         <Footer />
       </body>

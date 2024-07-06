@@ -37,7 +37,7 @@ export default function Posts({
           description={post.meta.description}
           date={post.meta.date}
           tag={post.meta.tag}
-          link={post.link}
+          slug={post.slug}
           location={location}
           key={index}
         />
@@ -52,7 +52,7 @@ function Post({
   description,
   date,
   tag,
-  link,
+  slug,
   location,
 }: {
   image: string;
@@ -60,12 +60,12 @@ function Post({
   description: string;
   date: string;
   tag: string;
-  link: string;
+  slug: string;
   location: string;
 }) {
   return (
     <div className={styles.post}>
-      <Link className={styles.link} href={"/" + location + "/posts/" + link}>
+      <Link className={styles.link} href={"/" + location + "/posts/" + slug}>
         <div className={styles.image_wrap}>
           <Image
             className={styles.image}

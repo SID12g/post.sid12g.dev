@@ -2,12 +2,8 @@ import styles from "@/app/tech/page.module.css";
 import Background from "@/components/background/background";
 import Posts from "@/components/posts/posts";
 import Tags from "@/components/tags/tags";
-import { techContents } from "@/utils/getPosts";
-import { techTags } from "@/utils/getTags";
 
 export default function Tech() {
-  console.log(techTags);
-  console.log(techContents);
   return (
     <main className={styles.main}>
       <Background />

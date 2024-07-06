@@ -2,12 +2,19 @@ import styles from "@/app/tech/[tag]/page.module.css";
 import Background from "@/components/background/background";
 import Posts from "@/components/posts/posts";
 import Tags from "@/components/tags/tags";
-import { techContents } from "@/utils/getPosts";
 import { techTags } from "@/utils/getTags";
+import { redirect } from "next/navigation";
 
 export default function Tech({ params }: { params: { tag: string } }) {
-  console.log(techTags);
-  console.log(techContents);
+  function findNullTag() {
+    if (techTags.find((tags) => tags.link == params.tag)?.tag === undefined) {
+      redirect("/tech/page/not-found");
+    } else {
+      return techTags.find((tags) => tags.link == params.tag)?.tag;
+    }
+  }
+
+  findNullTag();
   return (
     <main className={styles.main}>
       <Background />

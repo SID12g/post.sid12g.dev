@@ -13,7 +13,7 @@ const allTechContents = techFiles
     const { data: frontMatter } = matter(fileContent);
     return {
       meta: frontMatter,
-      link: filename.replace(".mdx", ""),
+      slug: filename.replace(".mdx", ""),
       content: fileContent,
     };
   })
@@ -28,7 +28,7 @@ const allArticleContents = articleFiles
     const { data: frontMatter } = matter(fileContent);
     return {
       meta: frontMatter,
-      link: filename.replace(".mdx", ""),
+      slug: filename.replace(".mdx", ""),
       content: fileContent,
     };
   })

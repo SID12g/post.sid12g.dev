@@ -13,12 +13,14 @@ export default function Navbar() {
   const [navStyle, setNavstyle] = useState(styles.navbar_dynamic);
 
   const handleScroll = () => {
-    if (scroll >= 100) {
-      setScroll(window.scrollY);
-      setNavstyle(styles.navbar_static);
-    } else {
-      setScroll(window.scrollY);
-      setNavstyle(styles.navbar_dynamic);
+    if (window.innerWidth > 550) {
+      if (scroll >= 100) {
+        setScroll(window.scrollY);
+        setNavstyle(styles.navbar_static);
+      } else {
+        setScroll(window.scrollY);
+        setNavstyle(styles.navbar_dynamic);
+      }
     }
   };
 
@@ -28,6 +30,7 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   });
+
   return (
     <nav className={navStyle}>
       <Link

@@ -14,9 +14,12 @@
   position: fixed;
   top: 0;
   z-index: 100;
+  animation-name: static_to_dynamic;
+  animation-duration: 0.3s;
 }
 
 .navbar_static {
+  background-color: var(--background-color);
   width: calc(100% - 80px);
   height: 72px;
   display: flex;
@@ -24,10 +27,13 @@
   justify-content: space-between;
   padding: 0 40px;
   border-bottom: 1px solid var(--border-grey-color);
+  left: 50%;
+  transform: translate(-50%, 0);
   position: fixed;
   top: 0;
   z-index: 100;
-  background-color: var(--background-color);
+  animation-name: dynamic_to_static;
+  animation-duration: 0.3s;
 }
 
 .logo {
@@ -74,9 +80,64 @@
   transition: all 0.3s;
 }
 
+/** aninimation **/
+
+@keyframes dynamic_to_static {
+  0% {
+    width: 1020px;
+    margin-top: 64px;
+  }
+  100% {
+    width: calc(100% - 80px);
+    margin-top: 0px;
+  }
+}
+
+@keyframes static_to_dynamic {
+  0% {
+    width: calc(100% - 80px);
+    margin-top: 0px;
+  }
+  100% {
+    width: 1020px;
+    margin-top: 64px;
+  }
+}
+
+@keyframes dynamic_to_static_1180 {
+  0% {
+    width: calc(100% - 160px);
+    margin-top: 64px;
+  }
+  100% {
+    width: calc(100% - 80px);
+    margin-top: 0px;
+  }
+}
+
+@keyframes static_to_dynamic_1180 {
+  0% {
+    width: calc(100% - 80px);
+    margin-top: 0px;
+  }
+  100% {
+    width: calc(100% - 160px);
+    margin-top: 64px;
+  }
+}
+
+/** media query **/
+
 @media (max-width: 1180px) {
   .navbar_dynamic {
     width: calc(100% - 160px);
+    animation-name: static_to_dynamic_1180;
+    animation-duration: 0.3s;
+  }
+
+  .navbar_static {
+    animation-name: dynamic_to_static_1180;
+    animation-duration: 0.3s;
   }
 }
 
@@ -96,11 +157,6 @@
     top: 0;
     z-index: 100;
     background-color: var(--background-color);
-  }
-
-  .navbar_static {
-    width: calc(100% - 40px);
-    padding: 0 20px;
-    animation: none;
+    animation: unset;
   }
 }

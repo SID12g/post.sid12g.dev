@@ -1,17 +1,17 @@
 import styles from "@/components/background/background.module.css";
 import Image from "next/image";
-import { imageData } from "@/utils/data";
-import Link from "next/link";
+import techBackground from "@/../public/backgrounds/tech_background.jpg";
+import articleBackground from "@/../public/backgrounds/article_background.jpg";
 
 export default function Background({ location }: { location: string }) {
-  const randomNum = Math.floor(Math.random() * 58);
+  const randomNum = new Date().getSeconds();
 
   return (
-    <Link href={imageData[randomNum].links.html} className={styles.background}>
+    <div className={styles.background}>
       <Image
         priority={true}
         className={styles.background_image}
-        src={imageData[randomNum].urls.full}
+        src={location === "tech" ? techBackground : articleBackground}
         width={1100}
         height={400}
         alt="background"
@@ -22,6 +22,6 @@ export default function Background({ location }: { location: string }) {
         </p>
         <p className={styles.message_author}>아리안 시로네</p>
       </div>
-    </Link>
+    </div>
   );
 }

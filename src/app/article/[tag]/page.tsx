@@ -19,7 +19,7 @@ export default function Tech({ params }: { params: { tag: string } }) {
   findNullTag();
   return (
     <main className={styles.main}>
-      <Background />
+      <Background location="article" />
       <Tags location="article" nowTag={params.tag} />
       <Posts location="article" nowTag={params.tag} />
     </main>

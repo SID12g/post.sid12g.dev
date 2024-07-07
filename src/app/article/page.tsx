@@ -6,7 +6,7 @@ import Tags from "@/components/tags/tags";
 export default function Tech() {
   return (
     <main className={styles.main}>
-      <Background />
+      <Background location="article" />
       <Tags location="article" nowTag="" />
       <Posts location="article" nowTag="" />
     </main>

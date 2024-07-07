@@ -2,7 +2,7 @@ import styles from "@/components/background/background.module.css";
 import Image from "next/image";
 import background from "@/../public/background.jpg";
 
-export default function Background() {
+export default function Background({ location }: { location: string }) {
   return (
     <div className={styles.background}>
       <Image

@@ -9,7 +9,6 @@ export default function Background({ location }: { location: string }) {
   return (
     <div className={styles.background}>
       <Image
-        priority={true}
         className={styles.background_image}
         src={location === "tech" ? techBackground : articleBackground}
         width={1100}

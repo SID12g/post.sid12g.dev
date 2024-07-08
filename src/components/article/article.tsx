@@ -35,7 +35,17 @@ const options: any = {
   },
 };
 
-export default function Article({ props }: { props: any }) {
+export default function Article({
+  props,
+}: {
+  props: {
+    frontMatter: {
+      [key: string]: any;
+    };
+    slug: string;
+    content: string;
+  };
+}) {
   function getLink() {
     return techTags.find((tags) => tags.tag == props.frontMatter.tag)?.link;
   }

@@ -197,27 +197,50 @@
   overflow: scroll;
   -ms-overflow-style: none; /* 인터넷 익스플로러 */
   scrollbar-width: none; /* 파이어폭스 */
-  background-color: #1d1d1d !important;
+  background-color: var(--background-color) !important;
   margin: 0;
 }
 
 .content code span {
+  font-size: 14px;
   font-family: Menlo;
-  color: #c9d1d9;
+  color: var(--text-black-color);
 }
 
 .content pre::-webkit-scrollbar {
   display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
 
-.content figure {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 12px;
+.content div {
+  font-size: 14px;
+  font-family: "Menlo";
+  color: #666666;
+  background-color: #fafafa;
   padding: 20px;
-  margin: 20px 0;
-  background-color: #1d1d1d;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  border: 1.6px solid var(--border-grey-color);
+  border-bottom: none;
+}
+
+.content div + figure {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding: 16px;
+  margin: 0;
+  margin-bottom: 20px;
+  border: 1.6px solid var(--border-grey-color);
+  /* background-color: aqua; */
+}
+
+.content figure {
+  border-radius: 16px;
+  padding: 16px;
+  margin: 0;
+  margin-bottom: 20px;
+  border: 1.6px solid var(--border-grey-color);
 }
 
 .content code {

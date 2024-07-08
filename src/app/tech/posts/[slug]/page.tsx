@@ -11,16 +11,18 @@ import remarkToc from "remark-toc";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
 import Comments from "@/components/comments/comments";
+import rehypeCodeTitles from "rehype-code-titles";
 
 const options: any = {
   mdxOptions: {
     remarkPlugins: [remarkToc],
     rehypePlugins: [
+      rehypeCodeTitles,
       rehypeSlug,
       [
         rehypePrettyCode,
         {
-          theme: "github-dark",
+          theme: "github-light",
         },
       ],
       [

@@ -8,6 +8,13 @@
   text-decoration: none;
 }
 
+html {
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -o-text-size-adjust: none;
+}
+
 :root {
   --background-color: #ffffff;
   --background-black-color: #000000;

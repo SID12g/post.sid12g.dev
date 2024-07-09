@@ -192,7 +192,6 @@
 }
 
 .content pre {
-  font-size: 16px;
   line-height: 28px;
   overflow: scroll;
   -ms-overflow-style: none; /* 인터넷 익스플로러 */
@@ -202,6 +201,12 @@
 }
 
 .content code span {
+  font-size: 14px;
+  font-family: Menlo;
+  color: var(--text-black-color);
+}
+
+.content code span span {
   font-size: 14px;
   font-family: Menlo;
   color: var(--text-black-color);

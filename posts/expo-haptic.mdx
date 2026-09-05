@@ -1,0 +1,56 @@
+---
+title: React Native Expo 환경에서 햅틱 구현하기
+publishedAt: 2026-09-06
+summary: expo-haptics를 이용한 햅틱 구현
+tag: React Native
+---
+
+햅틱을 구현하기 위해서는 가장 먼저 `expo-haptics`를 설치해야한다.
+
+```zsh
+pnpm expo install expo-haptics
+```
+
+이후 햅틱을 사용하는 페이지에 다음을 추가한다.
+
+```tsx
+import * as Haptics from "expo-haptics";
+
+Haptics.selectionAsync();
+```
+
+예를 들어 버튼을 눌렀을 때 햅틱이 반응하게 하고싶다면 다음과 같이 작성한다.
+
+```tsx
+// src/app/index.tsx
+
+import * as Haptics from "expo-haptics";
+import { Pressable, StyleSheet, Text, View } from "react-native";
+
+export default function HomeScreen() {
+  const handlePress = () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Pressable onPress={handlePress} style={styles.button}>
+        <Text>누르기</Text>
+      </Pressable>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  button: {
+    padding: 16,
+    borderRadius: 8,
+    backgroundColor: "#eee",
+  },
+});
+```
